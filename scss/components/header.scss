@@ -1,0 +1,76 @@
+@import "../variables";
+
+.header {
+  background: $gray-color-7;
+  height: $header-height;
+}
+
+.header:before{
+  content: '';
+  width: 100%;
+  height: $header-border-size;
+  background: $accent-color;
+  position: absolute;
+}
+
+.header__container, .header__row, .header__logo, .header__list, .header__item  {
+  height: 100%;
+  display: flex;
+}
+
+.header__logo {
+  font-size: $logo-size;
+  font-weight: $bold;
+  color: $pink-color;
+  align-items: center;
+  flex: 1;
+}
+
+.header__item {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 $header-padding;
+  color: $gray-color-1;
+  position: relative;
+}
+
+.header__item:hover {
+  cursor: pointer;
+  @extend .header__item--active
+}
+
+.header__item:before:not(.header__donate) {
+  content: '';
+  width: 100%;
+  height: $header-border-size;
+  background: $accent-color;
+  position: absolute;
+  top:0;
+  border-left: solid 0.125rem $gray-color-7;
+  border-right: solid 0.125rem $gray-color-7;
+}
+
+.header__item:hover::before{
+  background: $primary-color;
+}
+
+.header__link {
+  @extend .small-font-label;
+  color: inherit;
+}
+
+.header__item--active{
+  color: $primary-color;
+}
+
+.header__item--active::before{
+  background: $primary-color;
+}
+
+.header__donate{
+  background: $green-color;
+  font-weight: $extra-bold;
+}
+
+

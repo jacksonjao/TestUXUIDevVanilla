@@ -1,0 +1,86 @@
+// Table of Contents:
+//
+//  1. Colors
+//  2. Typography
+//  3. Boxes
+//  4. Cards
+//  5. Carousel
+//  6. Collapsible
+//  7. Chips
+//  8. Date + Time Picker
+//  9. Dropdown
+//  10. Forms
+//  11. Global
+//  12. Grid
+//  13. Navigation Bar
+//  14. Side Navigation
+//  15. Photo Slider
+//  16. Spinners | Loaders
+//  17. Tabs
+//  18. Tables
+//  19. Toasts
+//  20. Typography
+//  21. Footer
+//  22. Flow Text
+//  23. Collections
+//  24. Progress Bar
+
+
+// 1. Colors
+// ==========================================================================
+
+
+:root {
+  --pink-color: #ffe5e5;
+  --red-color: #e7402f;
+  --primary-color: #cc4d4d;
+  --accent-color: #773737;
+  --secondary-color: #222222;
+  --green-color: #32ba6d;
+  --white-color: #ffffff;
+  --gray-color-1: #eeeeee;
+  --gray-color-2: #bbbbbb;
+  --gray-color-3: #999999;
+  --gray-color-4: #666666;
+  --gray-color-5: #323232;
+  --gray-color-6: #2a2a2a;
+  --gray-color-7: #222222;
+}
+
+$pink-color: var(--pink-color);
+$red-color: var(--red-color);
+$primary-color: var(--primary-color);
+$accent-color: var(--accent-color);
+$secondary: var(--secondary-color);
+$green-color: var(--green-color);
+$white-color: var(--white-color);
+$gray-color-1: var(--gray-color-1);
+$gray-color-2: var(--gray-color-2);
+$gray-color-3: var(--gray-color-3);
+$gray-color-4: var(--gray-color-4);
+$gray-color-5: var(--gray-color-5);
+$gray-color-6: var(--gray-color-6);
+$gray-color-7: var(--gray-color-7);
+
+// 2. Typography
+// ==========================================================================
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap');
+
+$open-sans-font: 'Open Sans', sans-serif;
+$light: 300;
+$regular: 400;
+$regular-italic: 400i;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+// 3. Header
+// ==========================================================================
+
+$logo-size: 2.666668682415rem;
+$header-height: 6.25rem;
+$header-padding: 1.5625rem;
+$header-border-size: 0.4375rem;
+
+// 4. Boxes
+// ==========================================================================
