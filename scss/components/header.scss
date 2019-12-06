@@ -1,5 +1,6 @@
 @import "../variables";
 
+
 .header {
   width: 100%;
   background: $gray-color-7;
@@ -9,13 +10,17 @@
   position: fixed;
   top: 0;
 }
-
 .header:before {
   content: '';
   width: 100%;
   height: $header-border-size;
   background: $accent-color;
   position: absolute;
+  margin-left: -2rem;
+}
+
+.header__container{
+  max-width: 100%;
 }
 
 .header__container, .header__row, .header__logo, .header__list, .header__item {
@@ -39,6 +44,8 @@
   color: $gray-color-1;
   position: relative;
 }
+
+
 
 .header__item:not(.header__donate):before {
   content: '';
@@ -90,9 +97,7 @@
   @include menu-icon;
 
   .header {
-    width: 100vw;
     height: 0;
-    position: fixed;
   }
 
   .header-fade-in {
@@ -101,9 +106,6 @@
 
   .header__container, .header__list {
     flex-direction: column;
-  }
-  .header__container, .header__row, .header__logo, .header__list, .header__item {
-    display: flex;
   }
 
   .header__logo {

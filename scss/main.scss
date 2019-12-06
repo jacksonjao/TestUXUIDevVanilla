@@ -1,3 +1,4 @@
+@import "global";
 @import "libraries/normalize";
 @import "libraries/flexboxgrid";
 /*
@@ -8,4 +9,9 @@ Here libraries finished
 @import "components/header";
 @import "components/presentation";
 @import "components/causes";
-@import "global";
+
+
+@media (max-width: 992px) {
+  @include header--md();
+  @include presentation--md();
+}

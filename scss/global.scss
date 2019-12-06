@@ -1,22 +1,33 @@
 @import "variables";
 
-*{
+* {
   font-family: $open-sans-font;
   box-sizing: border-box;
+  margin: 0;
 }
-a{
+
+
+
+a {
   text-decoration: none;
 }
-li{
+
+li {
   list-style-type: none;
 }
 
-ul{margin: 0;
-padding: 0}
+ul {
+  margin: 0;
+  padding: 0
+}
 
-.small-font-label{
+button{
+  border: none;
+}
+
+.small-font-label {
   font-weight: $semi-bold;
-  font-size:  0.75rem;
+  font-size: 0.75rem;
 }
 
 .icon {
@@ -28,18 +39,27 @@ padding: 0}
   mask: url(../assets/heart-icon.svg);
 }
 
-.heading-1{
+.heading-1 {
   font-weight: $regular;
   font-size: 2.6875rem;
-  margin: 0;
 }
 
-.paragraph{
+.heading-2 {
+  font-weight: $semi-bold;
+  font-size: 1.625rem;
+}
+
+
+.paragraph {
   font-weight: $regular;
   font-size: 0.875rem;
 }
 
-.simple-button{
+.paragraph-light {
+  font-weight: $light;
+}
+
+.simple-button {
   border: none;
   color: $white-color;
   background-color: $gray-color-7;
@@ -47,11 +67,7 @@ padding: 0}
   font-size: 0.875rem;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
-@media (max-width: 992px) {
-  @include header--md();
-  @include presentation--md();
-}

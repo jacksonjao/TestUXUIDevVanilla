@@ -15,6 +15,7 @@
 
 .presentation__title{
   @extend .heading-1;
+  margin: $margin 0;
   width: 100%;
   padding: 0.25rem 1.25rem;
 }
@@ -24,11 +25,13 @@
   width: 100%;
   padding: 1rem 1.25rem;
   line-height: 1.5625rem;
+  margin: $margin 0;
 }
 
 .presentation__read-more-button{
   @extend .simple-button;
   padding: 0.6rem 1.25rem;
+  margin: $margin 0;
 }
 
 
