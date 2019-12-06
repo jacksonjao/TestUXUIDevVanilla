@@ -1432,10 +1432,12 @@ Here libraries finished
 }
 
 .presentation__title {
+  width: 100%;
   padding: 0.25rem 1.25rem;
 }
 
 .presentation__paragraph {
+  width: 100%;
   padding: 1rem 1.25rem;
   line-height: 1.5625rem;
 }
