@@ -4,88 +4,91 @@
     <meta charset="UTF-8">
     <title>Charity</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+          integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link rel="stylesheet" href="scss/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-<header class="header">
+<span  id="header__menu-button" onclick="navigation.toggleMenu()"><div class="header__menu-icon"></div></span>
+<header class="header" id="header">
     <nav class="container header__container">
-            <span id="logo" title="Go to Charity" class="header__logo">Charity.</span>
-            <ul class="header__list">
-                <li class="header__item header__item--active">
-                    <a href="" class="header__link">Home</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Our causes</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Events</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">News</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Directors</a>
-                </li>
-                <li class="header__item">
-                    <a href="" class="header__link">Features</a>
-                </li>
-                <li class="header__item header__donate">
-                    <img class="icon header__donate-icon"
-                         src="assets/heart-icon.svg"
-                         aria-hidden="true"
-                         alt="icon represents donate">
-                    <a href="" class="header__link">Donate!</a>
-                </li>
-            </ul>
+        <span id="logo" title="Go to Charity" class="header__logo">Charity.</span>
+        <ul class="header__list">
+            <li class="header__item header__item--active">
+                <a href="" class="header__link">Home</a>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link">Our causes</a>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link">Events</a>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link">News</a>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link">Directors</a>
+            </li>
+            <li class="header__item">
+                <a href="" class="header__link">Features</a>
+            </li>
+            <li class="header__item header__donate">
+                <img class="icon header__donate-icon"
+                     src="assets/heart-icon.svg"
+                     aria-hidden="true"
+                     alt="icon represents donate">
+                <a href="" class="header__link">Donate!</a>
+            </li>
+        </ul>
     </nav>
 </header>
 <section>
-<!--
 
-    <section class="container-fluid">
-        <div class="container">
-            <div class="row">
-        <h1>Creative Clean Charity Design</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan pretium leo ut consectetur. Vestibulum
-            a mattis ipsum. Nunc turpis velit, consequat quis ipsum eu, fermentum adipiscing ligula.</p>
-        <button>Read More</button>
+
+        <section class="container-fluid">
+            <div class="container">
+                <div class="row">
+            <h1>Creative Clean Charity Design</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan pretium leo ut consectetur. Vestibulum
+                a mattis ipsum. Nunc turpis velit, consequat quis ipsum eu, fermentum adipiscing ligula.</p>
+            <button>Read More</button>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="container-fluid">
-        <div class="container">
-        <div class="row center-md">
-        <div class="col-md-4">
-        <figure><img src="" alt=""></figure>
-        <h3>Main Causes</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eleifend dapibus. Vestibulum
-            adipiscing ut nibh et fermentum. </p>
-        <button>+</button>
-        </div>
-        <div class="col-md-4">
-            <figure><img src="" alt=""></figure>
-            <h3>Main Causes</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eleifend dapibus. Vestibulum
-                adipiscing ut nibh et fermentum. </p>
-            <button>+</button>
-        </div>
-        <div class="col-md-4">
-            <figure><img src="" alt=""></figure>
-            <h3>Main Causes</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eleifend dapibus. Vestibulum
-                adipiscing ut nibh et fermentum. </p>
-            <button>+</button>
-        </div>
-        </div>
-        </div>
-    </section>
--->
+        </section>
+    <!--
+         <section class="container-fluid">
+             <div class="container">
+             <div class="row center-md">
+             <div class="col-md-4">
+             <figure><img src="" alt=""></figure>
+             <h3>Main Causes</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eleifend dapibus. Vestibulum
+                 adipiscing ut nibh et fermentum. </p>
+             <button>+</button>
+             </div>
+             <div class="col-md-4">
+                 <figure><img src="" alt=""></figure>
+                 <h3>Main Causes</h3>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eleifend dapibus. Vestibulum
+                     adipiscing ut nibh et fermentum. </p>
+                 <button>+</button>
+             </div>
+             <div class="col-md-4">
+                 <figure><img src="" alt=""></figure>
+                 <h3>Main Causes</h3>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eleifend dapibus. Vestibulum
+                     adipiscing ut nibh et fermentum. </p>
+                 <button>+</button>
+             </div>
+             </div>
+             </div>
+         </section>
+     -->
 
 </section>
-<script src="js/materialize/bin/materialize.min.js"></script>
-<script src="js/main.js"></script>
+<script type="text/javascript" src="js/libraries/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/components/navigation.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

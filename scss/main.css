@@ -7,6 +7,7 @@
  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -1317,6 +1318,123 @@ Here libraries finished
   --gray-color-5: #323232;
   --gray-color-6: #2a2a2a;
   --gray-color-7: #222222;
+  --modal-color: rgba(34, 34, 34, 0.95);
+}
+
+.header {
+  background: var(--gray-color-7);
+  height: 6.25rem;
+  transition: 0.25s;
+  overflow: hidden;
+}
+
+.header:before {
+  content: "";
+  width: 100%;
+  height: 0.4375rem;
+  background: var(--accent-color);
+  position: absolute;
+}
+
+.header__container, .header__row, .header__logo, .header__list, .header__item {
+  height: 100%;
+  display: flex;
+}
+
+.header__logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--pink-color);
+  align-items: center;
+  flex: 1;
+}
+
+.header__item {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5625rem;
+  color: var(--gray-color-1);
+  position: relative;
+}
+
+.header__item:not(.header__donate):before {
+  content: "";
+  width: 100%;
+  height: 0.4375rem;
+  background: var(--accent-color);
+  position: absolute;
+  top: 0;
+  border-left: solid 0.125rem var(--gray-color-7);
+  border-right: solid 0.125rem var(--gray-color-7);
+}
+
+.header__item:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.header__item:hover::before {
+  background: var(--primary-color);
+}
+
+.header__item--active {
+  color: var(--primary-color) !important;
+}
+
+.header__item--active:before {
+  background: var(--primary-color) !important;
+}
+
+.header__link {
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.header__donate {
+  background: var(--green-color);
+  font-weight: 400i;
+}
+
+.header__donate > .header__link {
+  font-weight: 800;
+  margin-top: 0.3125rem;
+}
+
+:root {
+  --pink-color: #ffe5e5;
+  --red-color: #e7402f;
+  --primary-color: #cc4d4d;
+  --accent-color: #773737;
+  --secondary-color: #222222;
+  --green-color: #32ba6d;
+  --white-color: #ffffff;
+  --gray-color-1: #eeeeee;
+  --gray-color-2: #bbbbbb;
+  --gray-color-3: #999999;
+  --gray-color-4: #666666;
+  --gray-color-5: #323232;
+  --gray-color-6: #2a2a2a;
+  --gray-color-7: #222222;
+  --modal-color: rgba(34, 34, 34, 0.95);
+}
+
+:root {
+  --pink-color: #ffe5e5;
+  --red-color: #e7402f;
+  --primary-color: #cc4d4d;
+  --accent-color: #773737;
+  --secondary-color: #222222;
+  --green-color: #32ba6d;
+  --white-color: #ffffff;
+  --gray-color-1: #eeeeee;
+  --gray-color-2: #bbbbbb;
+  --gray-color-3: #999999;
+  --gray-color-4: #666666;
+  --gray-color-5: #323232;
+  --gray-color-6: #2a2a2a;
+  --gray-color-7: #222222;
+  --modal-color: rgba(34, 34, 34, 0.95);
 }
 
 * {
@@ -1339,7 +1457,7 @@ ul {
 
 .small-font-label, .header__link {
   font-weight: 600;
-  font-size: 1.0000007559rem;
+  font-size: 0.75rem;
 }
 
 .icon {
@@ -1351,92 +1469,97 @@ ul {
   mask: url(../assets/heart-icon.svg);
 }
 
-:root {
-  --pink-color: #ffe5e5;
-  --red-color: #e7402f;
-  --primary-color: #cc4d4d;
-  --accent-color: #773737;
-  --secondary-color: #222222;
-  --green-color: #32ba6d;
-  --white-color: #ffffff;
-  --gray-color-1: #eeeeee;
-  --gray-color-2: #bbbbbb;
-  --gray-color-3: #999999;
-  --gray-color-4: #666666;
-  --gray-color-5: #323232;
-  --gray-color-6: #2a2a2a;
-  --gray-color-7: #222222;
-}
+@media (max-width: 992px) {
+  #header__menu-button {
+    width: 2.5rem;
+    height: 2rem;
+    top: 2rem;
+    left: 2rem;
+    position: fixed;
+    z-index: 999;
+    padding-top: 0.8rem;
+  }
 
-.header {
-  background: var(--gray-color-7);
-  height: 6.25rem;
-}
+  #header__menu-button:hover {
+    cursor: pointer;
+  }
 
-.header:before {
-  content: "";
-  width: 100%;
-  height: 0.4375rem;
-  background: var(--accent-color);
-  position: absolute;
-}
+  .menu-icon, .header__menu-icon, .header__menu-icon:before, .header__menu-icon:after {
+    content: "";
+    width: 2.5rem;
+    height: 0.4rem;
+    background: var(--primary-color);
+    position: absolute;
+  }
 
-.header__container, .header__row, .header__logo, .header__list, .header__item {
-  height: 100%;
-  display: flex;
-}
+  .header__menu-icon, .header__menu-icon:before, .header__menu-icon:after {
+    transition: 0.25s;
+  }
 
-.header__logo {
-  font-size: 2.6666686824rem;
-  font-weight: 700;
-  color: var(--pink-color);
-  align-items: center;
-  flex: 1;
-}
+  .header__menu-icon {
+    transition: 0.25s;
+  }
 
-.header__item {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1.5625rem;
-  color: var(--gray-color-1);
-  position: relative;
-}
+  .header__menu-icon:before {
+    top: -0.8rem;
+  }
 
-.header__item:hover {
-  cursor: pointer;
-}
+  .header__menu-icon:after {
+    top: 0.8rem;
+  }
 
-.header__item:before:not(.header__donate) {
-  content: "";
-  width: 100%;
-  height: 0.4375rem;
-  background: var(--accent-color);
-  position: absolute;
-  top: 0;
-  border-left: solid 0.125rem var(--gray-color-7);
-  border-right: solid 0.125rem var(--gray-color-7);
-}
+  .header__menu-icon--activated {
+    width: 0;
+  }
 
-.header__item:hover::before {
-  background: var(--primary-color);
-}
+  .header__menu-icon--activated:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
 
-.header__link {
-  color: inherit;
-}
+  .header__menu-icon--activated:after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 
-.header__item--active, .header__item:hover {
-  color: var(--primary-color);
-}
+  .header {
+    width: 100vw;
+    height: 0;
+    position: fixed;
+  }
 
-.header__item--active::before, .header__item:hover::before {
-  background: var(--primary-color);
-}
+  .header-fade-in {
+    height: 100vh;
+  }
 
-.header__donate {
-  background: var(--green-color);
-  font-weight: 800;
+  .header__container, .header__list {
+    flex-direction: column;
+  }
+
+  .header__container, .header__row, .header__logo, .header__list, .header__item {
+    display: flex;
+  }
+
+  .header__logo {
+    justify-content: center;
+    margin-top: 1.3125rem;
+  }
+
+  .header__item:not(.header__donate):before {
+    display: none;
+  }
+
+  .header__item:hover::before {
+    display: none;
+  }
+
+  .header__item--active:before {
+    display: none;
+  }
+
+  .header__donate {
+    background: inherit;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

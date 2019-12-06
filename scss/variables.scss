@@ -2,7 +2,7 @@
 //
 //  1. Colors
 //  2. Typography
-//  3. Boxes
+//  3. Amination
 //  4. Cards
 //  5. Carousel
 //  6. Collapsible
@@ -45,6 +45,7 @@
   --gray-color-5: #323232;
   --gray-color-6: #2a2a2a;
   --gray-color-7: #222222;
+  --modal-color: rgba(34, 34, 34, 0.95);
 }
 
 $pink-color: var(--pink-color);
@@ -61,6 +62,7 @@ $gray-color-4: var(--gray-color-4);
 $gray-color-5: var(--gray-color-5);
 $gray-color-6: var(--gray-color-6);
 $gray-color-7: var(--gray-color-7);
+$modal-color: var(--modal-color);
 
 // 2. Typography
 // ==========================================================================
@@ -77,10 +79,11 @@ $extra-bold: 800;
 // 3. Header
 // ==========================================================================
 
-$logo-size: 2.666668682415rem;
+$logo-size: 2rem;
 $header-height: 6.25rem;
 $header-padding: 1.5625rem;
 $header-border-size: 0.4375rem;
 
-// 4. Boxes
+// 4. Animation
 // ==========================================================================
+$transition: 0.25s;
