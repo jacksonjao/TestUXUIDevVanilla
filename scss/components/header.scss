@@ -1,10 +1,13 @@
 @import "../variables";
 
 .header {
+  width: 100%;
   background: $gray-color-7;
   height: $header-height;
   transition: $transition;
   overflow: hidden;
+  position: fixed;
+  top: 0;
 }
 
 .header:before {
@@ -123,8 +126,8 @@
   #header__menu-button{
     width: 2.5rem;
     height: 2rem;
-    top: 2rem;
-    left: 2rem;
+    top: 1.5625rem;
+    left: 1.5625rem;
     position: fixed;
     z-index: 999;
     padding-top: 0.8rem;

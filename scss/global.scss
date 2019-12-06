@@ -53,4 +53,5 @@ button:hover{
 
 @media (max-width: 992px) {
   @include header--md();
+  @include presentation--md();
 }

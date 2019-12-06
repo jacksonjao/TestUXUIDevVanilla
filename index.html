@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <title>Charity</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-          integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link rel="stylesheet" href="scss/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-<span  id="header__menu-button" onclick="navigation.toggleMenu()"><div class="header__menu-icon"></div></span>
+<span id="header__menu-button" onclick="menu.toggleMenu()"><div class="header__menu-icon"></div></span>
 <header class="header" id="header">
     <nav class="container header__container">
         <span id="logo" title="Go to Charity" class="header__logo">Charity.</span>
@@ -44,36 +42,36 @@
     </nav>
 </header>
 <section>
-
-        <section class="container-fluid presentation">
-            <div class="container presentation__container">
-                <div class="row presentation__row col-md-7">
-            <h1 class="presentation__title">Creative Clean Charity Design</h1>
-            <p class="presentation__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan pretium leo ut consectetur. Vestibulum
-                a mattis ipsum. Nunc turpis velit, consequat quis ipsum eu, fermentum adipiscing ligula.</p>
-            <button class="presentation__read-more-button">Read More</button>
-                </div>
+    <section class="container-fluid presentation">
+        <div class="container presentation__container">
+            <div class="row presentation__row col-md-7">
+                <h1 class="presentation__title">Creative Clean Charity Design</h1>
+                <p class="presentation__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    accumsan pretium leo ut consectetur. Vestibulum
+                    a mattis ipsum. Nunc turpis velit, consequat quis ipsum eu, fermentum adipiscing ligula.</p>
+                <button class="presentation__read-more-button">Read More</button>
             </div>
-        </section>
-    <!--
-         <section class="container-fluid">
-             <div class="container">
-             <div class="row center-md">
-             <div class="col-md-4">
+        </div>
+    </section>
+
+         <section class="container-fluid causes">
+             <div class="container causes__container">
+             <div class="row center-md middle-md causes__row">
+             <div class="col-md">
              <figure><img src="" alt=""></figure>
              <h3>Main Causes</h3>
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eleifend dapibus. Vestibulum
                  adipiscing ut nibh et fermentum. </p>
              <button>+</button>
              </div>
-             <div class="col-md-4">
+             <div class="col-md">
                  <figure><img src="" alt=""></figure>
                  <h3>Main Causes</h3>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eleifend dapibus. Vestibulum
                      adipiscing ut nibh et fermentum. </p>
                  <button>+</button>
              </div>
-             <div class="col-md-4">
+             <div class="col-md">
                  <figure><img src="" alt=""></figure>
                  <h3>Main Causes</h3>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt eleifend dapibus. Vestibulum
@@ -83,11 +81,12 @@
              </div>
              </div>
          </section>
-     -->
+
 
 </section>
+
 <script type="text/javascript" src="js/libraries/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="js/components/navigation.js"></script>
+<script type="text/javascript" src="js/components/menu.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

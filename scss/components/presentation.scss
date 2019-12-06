@@ -2,10 +2,11 @@
 
 .presentation{
   background: $primary-color;
-  height: 34.0625rem;
+  min-height: $presentation-height;
   display: flex;
   align-items: center;
   color: $white-color;
+  padding-top: $header-height;
 }
 
 .presentation__title, .presentation__paragraph{
@@ -28,4 +29,11 @@
 .presentation__read-more-button{
   @extend .simple-button;
   padding: 0.6rem 1.25rem;
+}
+
+
+@mixin presentation--md() {
+  .presentation{
+    padding-top: 0;
+  }
 }
