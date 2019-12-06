@@ -1416,6 +1416,7 @@ Here libraries finished
   overflow: hidden;
   position: fixed;
   top: 0;
+  z-index: 998;
 }
 
 .header:before {
@@ -1566,19 +1567,26 @@ Here libraries finished
 .causes {
   background-color: var(--gray-color-1);
   height: 35.1875rem;
+  position: relative;
 }
 
-.causes__container {
-  height: 100%;
+.causes:before {
+  content: "";
+  width: 100%;
+  border-top: 0.125rem solid #dfdfe1;
+  height: 0.125rem;
+  background: var(--white-color);
+  position: absolute;
+  margin-left: -2rem;
+  top: 12.625rem;
 }
 
-.causes__row {
+.causes__container, .causes__row, .causes__item {
   height: 100%;
 }
 
 .causes__item {
   position: relative;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1618,10 +1626,18 @@ Here libraries finished
   height: 2.6875rem;
   border-radius: 50%;
   color: var(--white-color);
-  background-color: var(--primary-color);
+  background-color: var(--gray-color-1);
   border: solid 0.1875rem var(--white-color);
   position: absolute;
   bottom: -1.34375rem;
+}
+
+.causes__button--active {
+  background-color: var(--primary-color);
+}
+
+.causes__button:hover {
+  background-color: var(--primary-color);
 }
 
 .causes__paragraph {
@@ -1638,7 +1654,6 @@ Here libraries finished
     position: fixed;
     z-index: 999;
     padding-top: 0.8rem;
-    background-color: var(--accent-color);
   }
 
   #header__menu-button:hover {
@@ -1651,6 +1666,7 @@ Here libraries finished
     height: 0.4rem;
     background: var(--white-color);
     position: absolute;
+    box-shadow: var(--accent-color) 2px 2px 5px;
   }
 
   .header__menu-icon, .header__menu-icon:before, .header__menu-icon:after {

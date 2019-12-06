@@ -3,18 +3,26 @@
 .causes {
   background-color: $gray-color-1;
   height: $causes-height;
+  position: relative;
 }
 
-.causes__container {
+.causes:before {
+  content: '';
+  width: 100%;
+  border-top: 0.125rem solid #dfdfe1;
+  height: 0.125rem;
+  background: $white-color;
+  position: absolute;
+  margin-left: -2rem;
+  top: 12.625rem;
+}
+
+.causes__container, .causes__row, .causes__item {
   height: 100%;
 }
 
-.causes__row {
-  height: 100%;
-}
 .causes__item{
   position: relative;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,10 +64,18 @@
   height: $size;
   border-radius: 50%;
   color: $white-color;
-  background-color: $primary-color;
+  background-color: $gray-color-1;
   border: solid 0.1875rem $white-color;
   position: absolute;
   bottom: -$size/2;
+}
+
+.causes__button--active{
+  background-color: $primary-color;
+}
+
+.causes__button:hover{
+  background-color: $primary-color;
 }
 
 .causes__paragraph {
@@ -67,4 +83,3 @@
   color: $gray-color-4;
   margin: $margin 0;
 }
-
