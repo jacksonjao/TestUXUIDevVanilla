@@ -2,9 +2,9 @@
 //
 //  1. Colors
 //  2. Typography
-//  3. Amination
-//  4. Cards
-//  5. Carousel
+//  3. Header
+//  4. Util
+//  5. Presentation
 //  6. Collapsible
 //  7. Chips
 //  8. Date + Time Picker
@@ -84,6 +84,7 @@ $header-height: 6.25rem;
 $header-padding: 1.5625rem;
 $header-border-size: 0.4375rem;
 
-// 4. Animation
+// 4. Util
 // ==========================================================================
 $transition: 0.25s;
+$border: solid 0.0625rem;

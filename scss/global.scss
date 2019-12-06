@@ -28,6 +28,28 @@ padding: 0}
   mask: url(../assets/heart-icon.svg);
 }
 
+.heading-1{
+  font-weight: $regular;
+  font-size: 2.6875rem;
+  margin: 0;
+}
+
+.paragraph{
+  font-weight: $regular;
+  font-size: 0.875rem;
+}
+
+.simple-button{
+  border: none;
+  color: $white-color;
+  background-color: $gray-color-7;
+  font-weight: $bold;
+  font-size: 0.875rem;
+}
+
+button:hover{
+  cursor: pointer;
+}
 
 @media (max-width: 992px) {
   @include header--md();

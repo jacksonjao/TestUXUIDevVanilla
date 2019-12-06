@@ -1,7 +1,6 @@
 class Navigation {
     actionButton;
     menu;
-    toggle = false;
     constructor(actionButtonId, menuId) {
        this.actionButton = $(actionButtonId);
        this.menu = $(menuId);

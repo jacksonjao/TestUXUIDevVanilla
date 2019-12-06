@@ -1419,6 +1419,31 @@ Here libraries finished
   --modal-color: rgba(34, 34, 34, 0.95);
 }
 
+.presentation {
+  background: var(--primary-color);
+  height: 34.0625rem;
+  display: flex;
+  align-items: center;
+  color: var(--white-color);
+}
+
+.presentation__title, .presentation__paragraph {
+  background: var(--accent-color);
+}
+
+.presentation__title {
+  padding: 0.25rem 1.25rem;
+}
+
+.presentation__paragraph {
+  padding: 1rem 1.25rem;
+  line-height: 1.5625rem;
+}
+
+.presentation__read-more-button {
+  padding: 0.6rem 1.25rem;
+}
+
 :root {
   --pink-color: #ffe5e5;
   --red-color: #e7402f;
@@ -1469,6 +1494,29 @@ ul {
   mask: url(../assets/heart-icon.svg);
 }
 
+.heading-1, .presentation__title {
+  font-weight: 400;
+  font-size: 2.6875rem;
+  margin: 0;
+}
+
+.paragraph, .presentation__paragraph {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.simple-button, .presentation__read-more-button {
+  border: none;
+  color: var(--white-color);
+  background-color: var(--gray-color-7);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 992px) {
   #header__menu-button {
     width: 2.5rem;
@@ -1478,6 +1526,7 @@ ul {
     position: fixed;
     z-index: 999;
     padding-top: 0.8rem;
+    background-color: var(--accent-color);
   }
 
   #header__menu-button:hover {
@@ -1488,7 +1537,7 @@ ul {
     content: "";
     width: 2.5rem;
     height: 0.4rem;
-    background: var(--primary-color);
+    background: var(--white-color);
     position: absolute;
   }
 
@@ -1545,15 +1594,7 @@ ul {
     margin-top: 1.3125rem;
   }
 
-  .header__item:not(.header__donate):before {
-    display: none;
-  }
-
-  .header__item:hover::before {
-    display: none;
-  }
-
-  .header__item--active:before {
+  .header__item:before, .header__item:hover::before, .header__item--active:before {
     display: none;
   }
 

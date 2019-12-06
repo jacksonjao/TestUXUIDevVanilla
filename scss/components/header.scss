@@ -108,15 +108,7 @@
     margin-top: $header-border-size*3;
   }
 
-  .header__item:not(.header__donate):before {
-    display: none;
-  }
-
-  .header__item:hover::before {
-    display: none;
-  }
-
-  .header__item--active:before {
+  .header__item:before,  .header__item:hover::before, .header__item--active:before  {
     display: none;
   }
 
@@ -125,7 +117,6 @@
   }
 
 }
-
 
 @mixin menu-icon {
 
@@ -137,6 +128,7 @@
     position: fixed;
     z-index: 999;
     padding-top: 0.8rem;
+    background-color: $accent-color;
   }
 
   #header__menu-button:hover{
@@ -147,7 +139,7 @@
     content: '';
     width: 2.5rem;
     height: 0.4rem;
-    background: $primary-color;
+    background: $white-color;
     position: absolute;
   }
 

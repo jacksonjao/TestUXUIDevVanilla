@@ -1,2 +1,29 @@
 @import "../variables";
 
+.presentation{
+  background: $primary-color;
+  height: 34.0625rem;
+  display: flex;
+  align-items: center;
+  color: $white-color;
+}
+
+.presentation__title, .presentation__paragraph{
+  background: $accent-color;
+}
+
+.presentation__title{
+  @extend .heading-1;
+  padding: 0.25rem 1.25rem;
+}
+
+.presentation__paragraph{
+  @extend .paragraph;
+  padding: 1rem 1.25rem;
+  line-height: 1.5625rem;
+}
+
+.presentation__read-more-button{
+  @extend .simple-button;
+  padding: 0.6rem 1.25rem;
+}
