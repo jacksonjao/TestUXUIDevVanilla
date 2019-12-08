@@ -48,6 +48,11 @@
   position: relative;
 }
 
+.header__link:not(.header__link--donate){
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
 .header__item:not(.header__donate):before {
   content: '';

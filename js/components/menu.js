@@ -1,7 +1,6 @@
 class Menu {
     actionButtonRef;
     menuRef;
-    windowRef;
     scrollPosY;
     isMobile;
 

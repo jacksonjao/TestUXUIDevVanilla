@@ -15,37 +15,37 @@
     <nav class="container header__container" aria-label="gallery">
         <span id="logo" title="Go to Charity" class="header__logo">Charity.</span>
         <ul class="header__list">
-            <li class="header__item header__item--active">
-                <a href="" class="header__link">Home</a>
+            <li class="header__item header__item--active"  onclick="sectionSelected(this)">
+                <a href="#presentation" rel="sectionAnchor" class="header__link">Home</a>
+            </li>
+            <li class="header__item" onclick="sectionSelected(this)">
+                <a href="#causes" rel="sectionAnchor" class="header__link">Our causes</a>
+            </li>
+            <li class="header__item" onclick="sectionSelected(this)">
+                <a href="#events" rel="sectionAnchor" class="header__link">Events</a>
+            </li>
+            <li class="header__item" onclick="sectionSelected(this)">
+                <a href="#news" rel="sectionAnchor" class="header__link">News</a>
             </li>
             <li class="header__item">
-                <a href="" class="header__link">Our causes</a>
+                <a href="" rel="sectionAnchor" class="header__link">Directors</a>
             </li>
             <li class="header__item">
-                <a href="" class="header__link">Events</a>
-            </li>
-            <li class="header__item">
-                <a href="" class="header__link">News</a>
-            </li>
-            <li class="header__item">
-                <a href="" class="header__link">Directors</a>
-            </li>
-            <li class="header__item">
-                <a href="" class="header__link">Features</a>
+                <a href="" rel="sectionAnchor" class="header__link">Features</a>
             </li>
             <li class="header__item header__donate">
                 <img class="icon header__donate-icon"
                      src="assets/heart-icon.svg"
                      aria-hidden="true"
                      alt="icon represents donate">
-                <a href="" class="header__link">Donate!</a>
+                <a href="" class="header__link header__link--donate">Donate!</a>
             </li>
         </ul>
     </nav>
 </header>
 
 
-<section class="container-fluid presentation">
+<section id="presentation" class="container-fluid presentation">
     <div class="container col-md-12 col-sm-12  col-xs-12 presentation__container">
         <div class="row presentation__row middle-xs">
             <div class="col-md-7">
@@ -61,14 +61,15 @@
 </section>
 
 
-<section class="container-fluid causes">
+<section id="causes" class="container-fluid causes">
     <div class="container col-md-12 col-sm-12  col-xs-12 causes__container">
         <ul class="row center-md middle-md causes__row causes__list">
             <li class="col-md col-sm col-xs-12 causes__item">
                 <div class="causes__item-content">
                     <figure class="causes__picture"><img
-                            src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                            alt="image description"></figure>
+                            class="cover"
+                            src=""
+                            alt="Picture description"></figure>
                     <h3 class="causes__title">Main Causes</h3>
                     <p class="causes__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                         tincidunt eleifend dapibus. Vestibulum
@@ -79,8 +80,9 @@
             <li class="col-md col-sm col-xs-12 causes__item">
                 <div class="causes__item-content">
                     <figure class="causes__picture"><img
-                            src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                            alt="image description"></figure>
+                            class="cover"
+                            src=""
+                            alt="Picture description"></figure>
                     <h3 class="causes__title">Main Causes</h3>
                     <p class="causes__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                         tincidunt eleifend dapibus. Vestibulum
@@ -91,8 +93,9 @@
             <li class="col-md col-sm col-xs-12 causes__item">
                 <div class="causes__item-content">
                     <figure class="causes__picture"><img
-                            src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                            alt="image description"></figure>
+                            class="cover"
+                            src=""
+                            alt="Picture description"></figure>
                     <h3 class="causes__title">Main Causes</h3>
                     <p class="causes__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                         tincidunt eleifend dapibus. Vestibulum
@@ -118,34 +121,40 @@
                     </li>
                     <li class="subtitle-line-below__item">
                         <button class="start-md start-sm start-xs  subtitle-line-below__button"><img
-                                src="assets/option-icon.svg" alt=""></button>
+                                src="assets/option-icon.svg" alt="Picture description"></button>
                     </li>
                 </ul>
             </nav>
-            <ul class="basic-slider__list ">
-                <li class="basic-slider__item col-md-4 col-sm-5 col-xs-8">
+            <ul class="basic-slider__list  col-md-12 col-sm-12  col-xs-12">
+                <li class="basic-slider__item col-md-4 col-sm-5 col-xs-12">
                     <button class="basic-slider__button">+</button>
-                    <img class="cover"
-                         src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                         alt="Description">
+                    <figure class="feed__image">
+                        <img class="cover"
+                             src=""
+                             alt="Picture description">
+                    </figure>
                 </li>
-                <li class="basic-slider__item col-md-4 col-sm-5 col-xs-8">
+                <li class="basic-slider__item col-md-4 col-sm-5 col-xs-12">
                     <button class="basic-slider__button">+</button>
-                    <img class="cover"
-                         src="https://www.portafolio.co/files/article_multimedia/uploads/2016/02/18/56c63cda3bb08.jpeg"
-                         alt="Description">
+                    <figure class="feed__image">
+                        <img class="cover"
+                             src=""
+                             alt="Picture description">
+                    </figure>
                 </li>
-                <li class="basic-slider__item col-md-4 col-sm-5 col-xs-8">
+                <li class="basic-slider__item col-md-4 col-sm-5 col-xs-12">
                     <button class="basic-slider__button">+</button>
-                    <img class="cover"
-                         src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                         alt="Description">
+                    <figure class="feed__image">
+                        <img class="cover"
+                             src=""
+                             alt="Picture description">
+                    </figure>
                 </li>
             </ul>
         </section>
 
         <section class="latest row">
-            <section class="events col-md-8 col-sm-12 col-xs-12">
+            <section id="events" class="events col-md-8 col-sm-12 col-xs-12">
                 <div class="row events__row">
 
                     <nav class=" subtitle-line-below col-md-12 col-sm-12  col-xs-12" aria-label="Latest Events">
@@ -157,7 +166,7 @@
                             </li>
                             <li class="subtitle-line-below__item">
                                 <button class="start-md start-sm start-xs  subtitle-line-below__button"><img
-                                        src="assets/option-icon.svg" alt=""></button>
+                                        src="assets/option-icon.svg" alt="Picture description"></button>
                             </li>
                         </ul>
                     </nav>
@@ -165,8 +174,8 @@
                     <article class="feed__item col-md-12 col-sm-12 col-xs-12">
                         <figure class="feed__image">
                             <img class="cover"
-                                 src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                 alt="Description">
+                                 src=""
+                                 alt="Picture description">
                         </figure>
                         <div class="calendar">
                             <time datetime="2019-06-14 20:00" class="calendar__date">Jun <br> <span>14TH</span></time>
@@ -181,8 +190,8 @@
                     <article class="feed__item col-md-6 col-sm-6 col-xs-12">
                         <figure class="feed__image">
                             <img class="cover"
-                                 src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                 alt="">
+                                 src=""
+                                 alt="Picture description">
                         </figure>
                         <div class="calendar">
                             <time datetime="2019-06-14 20:00" class="calendar__date">Jun <br> <span>14TH</span></time>
@@ -197,8 +206,8 @@
                     <article class="feed__item col-md-6 col-sm-6 col-xs-12">
                         <figure class="feed__image">
                             <img class="cover"
-                                 src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                 alt="">
+                                 src=""
+                                 alt="Picture description">
                         </figure>
 
                         <div class="calendar">
@@ -214,7 +223,7 @@
                 </div>
             </section>
 
-            <section class="news col-md-4 col-sm-12 col-xs-12">
+            <section id="news" class="news col-md-4 col-sm-12 col-xs-12">
                 <div class="row news__row">
 
                     <nav class=" subtitle-line-below col-md-12 col-sm-12  col-xs-12" aria-label="Latest News">
@@ -226,7 +235,7 @@
                             </li>
                             <li class="subtitle-line-below__item">
                                 <button class="start-md start-sm start-xs  subtitle-line-below__button"><img
-                                        src="assets/option-icon.svg" alt=""></button>
+                                        src="assets/option-icon.svg" alt="Picture description"></button>
                             </li>
                         </ul>
                     </nav>
@@ -234,8 +243,8 @@
                     <article class="feed__item col-md-12 col-sm-12 col-xs-12">
                         <figure class="feed__image">
                             <img class="cover"
-                                 src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                 alt="">
+                                 src=""
+                                 alt="Picture description">
                         </figure>
 
                         <div class="feed__content">
@@ -251,8 +260,8 @@
                     <article class="feed__item col-md-12 col-sm-12 col-xs-12">
                         <figure class="feed__image">
                             <img class="cover"
-                                 src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                 alt="">
+                                 src=""
+                                 alt="Picture description">
                         </figure>
                         <div class="feed__content">
                             <h3 class="feed__title">Contrary to popular belief, Lorem Ipsum is not simply random</h3>
@@ -267,8 +276,8 @@
                     <article class="feed__item col-md-12 col-sm-12 col-xs-12">
                         <figure class="feed__image">
                             <img class="cover"
-                                 src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                 alt="">
+                                 src=""
+                                 alt="Picture description">
                         </figure>
                         <div class="feed__content">
                             <h3 class="feed__title">Contrary to popular belief, Lorem Ipsum is not simply random</h3>
@@ -294,42 +303,42 @@
                             </li>
                         </ul>
                     </nav>
-                    <button class="icon sponsors__next-button"><img src="assets/next-icon.svg" alt=""></button>
-                    <button class="icon sponsors__next-button"><img src="assets/next-icon.svg" alt=""></button>
+                    <button class="icon sponsors__next-button"><img src="assets/next-icon.svg" alt="Picture description"></button>
+                    <button class="icon sponsors__next-button"><img src="assets/next-icon.svg" alt="Picture description"></button>
                     <ul class="basic-slider__list feed__items col-md-12 col-sm-12 col-xs-12 ">
                         <li class="basic-slider__item feed__item">
                             <figure class="feed__image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                         <li class="basic-slider__item feed__item  ">
                             <figure class="feed__image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                         <li class="basic-slider__item  feed__item">
                             <figure class="feed__image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                         <li class="basic-slider__item  feed__item">
                             <figure class="feed__image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                         <li class="basic-slider__item  feed__item">
                             <figure class="feed__image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                     </ul>
@@ -359,13 +368,13 @@
                     <br>
                     <ul class="footer-1__about-icons">
                         <li class="about__icon"><a href="" class="col-md col-sm col-xs"><img
-                                src="assets/dribbble-icon.png" alt=""></a></li>
+                                src="assets/dribbble-icon.png" alt="Picture description"></a></li>
                         <li class="about__icon"><a href="" class="col-col-md col-sm col-xsmd"><img
-                                src="assets/social-icon.png" alt=""></a></li>
+                                src="assets/social-icon.png" alt="Picture description"></a></li>
                         <li class="about__icon"><a href="" class="col-md col-sm col-xs"><img
-                                src="assets/twitter-icon.png" alt=""></a></li>
+                                src="assets/twitter-icon.png" alt="Picture description"></a></li>
                         <li class="about__icon"><a href="" class="col-md col-sm col-xs"><img
-                                src="assets/facebook-icon.png" alt=""></a></li>
+                                src="assets/facebook-icon.png" alt="Picture description"></a></li>
                     </ul>
                 </section>
                 <section class="footer-1__news col-md-3 col-sm-6 col-xs-12">
@@ -381,8 +390,8 @@
                         <li class="footer-1__news-item">
                             <figure class="footer-1__news-image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                             <p class="footer-1__news-paragraph">Aliquam erat volutpat. Aenean sagittis dui accumsan
                                 viverra.</p>
@@ -390,8 +399,8 @@
                         <li class="footer-1__news-item">
                             <figure class="footer-1__news-image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                             <p class="footer-1__news-paragraph">Aliquam erat volutpat. Aenean sagittis dui accumsan
                                 viverra.</p>
@@ -399,8 +408,8 @@
                         <li class="footer-1__news-item">
                             <figure class="footer-1__news-image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                             <p class="footer-1__news-paragraph">Aliquam erat volutpat. Aenean sagittis dui accumsan
                                 viverra.</p>
@@ -419,43 +428,43 @@
                         <li class="footer-1__flickr-item">
                             <figure class="footer-1__flickr-image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                         <li class="footer-1__flickr-item">
                             <figure class="footer-1__flickr-image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                         <li class="footer-1__flickr-item">
                             <figure class="footer-1__flickr-image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                         <li class="footer-1__flickr-item">
                             <figure class="footer-1__flickr-image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                         <li class="footer-1__flickr-item">
                             <figure class="footer-1__flickr-image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                         <li class="footer-1__flickr-item">
                             <figure class="footer-1__flickr-image">
                                 <img class="cover"
-                                     src="https://www.hola.com/imagenes/viajes/20171103101515/imprescindibles-en-dubai-emiratos-arabes/0-503-849/dubai-panoramica-t.jpg"
-                                     alt="">
+                                     src=""
+                                     alt="Picture description">
                             </figure>
                         </li>
                     </ul>
@@ -470,9 +479,9 @@
                     </div>
                     <ul class="footer-1__twitter-list col-md col-sm col-xs">
                         <li class="footer-1__twitter-item">
-                            <figure class="footer-1__twitter-image">
-                                <img src="assets/twitter-bird-icon.png" alt="">
-                            </figure>
+                            <div class="footer-1__twitter-image">
+                                <img src="assets/twitter-bird-icon.png" alt="Picture description">
+                            </div>
                             <div class="footer-1__twitter-paragraph">
                                 <a class="footer-1__twitter-tag" href="">@ENVATO </a>
                                 <p class="footer-1__twitter-paragraph">
@@ -482,9 +491,9 @@
                             </div>
                         </li>
                         <li class="footer-1__twitter-item">
-                            <figure class="footer-1__twitter-image">
-                                <img src="assets/twitter-bird-icon.png" alt="">
-                            </figure>
+                            <div class="footer-1__twitter-image">
+                                <img src="assets/twitter-bird-icon.png" alt="Picture description">
+                            </div>
                             <div class="footer-1__twitter-paragraph">
                                 <a class="footer-1__twitter-tag" href="">@ENVATO </a>
                                 <p class="footer-1__twitter-paragraph">
@@ -516,6 +525,7 @@
 
 <script type="text/javascript" src="js/libraries/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/components/menu.js"></script>
+<script type="text/javascript" src="js/components/scroll-section.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

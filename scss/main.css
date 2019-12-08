@@ -108,6 +108,10 @@ button:focus, a:focus {
   object-position: 50% 50%;
 }
 
+figure {
+  background: var(--gray-color-2);
+}
+
 .paragraph, .footer-2__content, .footer-1__about-paragraph, .footer-1__news-paragraph, .footer-1__twitter-paragraph, .presentation__paragraph, .calendar__date--inline-text, .paragraph-light, .feed__paragraph, .causes__paragraph {
   font-weight: 400;
   font-size: 0.875rem;
@@ -1611,6 +1615,12 @@ Here libraries finished
   position: relative;
 }
 
+.header__link:not(.header__link--donate) {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .header__item:not(.header__donate):before {
   content: "";
   width: 100%;
@@ -1756,13 +1766,6 @@ Here libraries finished
   margin: 0.625rem 0;
 }
 
-.causes__picture > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-
 .causes__title {
   color: var(--gray-color-4);
   margin: 0.625rem 0;
@@ -1817,6 +1820,16 @@ Here libraries finished
 
 .feed__paragraph {
   color: var(--gray-color-4);
+}
+
+/*========================== Gallery ==========================*/
+.gallery .feed__image {
+  height: 16.25rem;
+  margin: 0;
+}
+
+.gallery .basic-slider__list {
+  padding: 0;
 }
 
 /*========================== Latest Events ==========================*/
