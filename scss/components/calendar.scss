@@ -1,0 +1,55 @@
+@import "../variables";
+/*========================== Calendar component ==========================*/
+
+$calendar-header-height: 0.5625rem;
+$calendar-border: 0.0625rem;
+.calendar {
+  width: 5rem;
+  height: 5rem;
+  background-color: $gray-color-0;
+  border: solid 0.05882352941rem $gray-color-1;
+  font-weight: $bold;
+  font-size: 1rem;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.calendar:before {
+  content: '';
+  width: 100%;
+  height: $calendar-header-height;
+  background-color: $primary-color;
+  position: absolute;
+  border: $calendar-border solid $primary-color;
+  top: -$calendar-border;
+}
+
+.calendar::after {
+  content: '';
+  width: 1.1875rem;
+  height: $calendar-border;
+  position: absolute;
+  margin: auto;
+  top: 0.25rem;
+  background-color: $white-color;
+}
+
+.calendar__date {
+  color: $gray-color-5;
+  line-height: 1.5rem;
+  padding-top: $calendar-header-height;
+}
+
+.calendar__date--inline-text{
+  @extend .paragraph;
+  font-size: 0.75rem;
+  color: $gray-color-4;
+}
+
+.calendar__date > span {
+  color: $aqua-color;
+}

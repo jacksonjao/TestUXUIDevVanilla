@@ -8,3 +8,4 @@ windowRef.scroll(() => {
 windowRef.resize((event) => {
     menu.setDevice(event.target.innerWidth <= 992);
 });
+

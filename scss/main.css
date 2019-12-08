@@ -2,22 +2,33 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 :root {
   --pink-color: #ffe5e5;
   --red-color: #e7402f;
   --primary-color: #cc4d4d;
-  --accent-color: #773737;
+  --primary-dark-color: #773737;
+  --primary-light-color: rgba(204, 77, 77, 0.6);
+  --accent-color: rgba(0, 0, 0, 0.5);
   --secondary-color: #222222;
   --green-color: #32ba6d;
+  --green-color-2: #97b16b;
+  --aqua-color: #009999;
   --white-color: #ffffff;
-  --gray-color-1: #eeeeee;
+  --gray-color-0: #fbfbfb;
+  --gray-color-1: #f0f0f0;
   --gray-color-2: #bbbbbb;
   --gray-color-3: #999999;
   --gray-color-4: #666666;
-  --gray-color-5: #323232;
-  --gray-color-6: #2a2a2a;
-  --gray-color-7: #222222;
-  --modal-color: rgba(34, 34, 34, 0.95);
+  --gray-color-5: #444444;
+  --gray-color-6: #393939;
+  --gray-color-7: #323232;
+  --gray-color-8: #2a2a2a;
+  --gray-color-9: #222222;
 }
 
 * {
@@ -41,6 +52,17 @@ ul {
 
 button {
   border: none;
+  padding: 0;
+  background: transparent;
+}
+
+button:focus, a:focus {
+  outline: none;
+  filter: brightness(0.8);
+}
+
+.basic-slider__list::-webkit-scrollbar, .gallery__list::-webkit-scrollbar {
+  display: none;
 }
 
 .small-font-label, .causes__button, .header__link {
@@ -59,7 +81,7 @@ button {
 
 .heading-1, .presentation__title {
   font-weight: 400;
-  font-size: 2.6875rem;
+  font-size: 1.5rem;
 }
 
 .heading-2, .causes__title {
@@ -67,25 +89,41 @@ button {
   font-size: 1.625rem;
 }
 
-.paragraph, .presentation__paragraph {
-  font-weight: 400;
-  font-size: 0.875rem;
+.heading-3, .feed__title, .subtitle-line-below__button {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3rem;
 }
 
-.paragraph-light, .causes__paragraph {
+.heading-4, .subtitle-line-below__text {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.3rem;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.paragraph, .footer-2__content, .footer-1__about-paragraph, .footer-1__news-paragraph, .footer-1__twitter-paragraph, .presentation__paragraph, .calendar__date--inline-text, .paragraph-light, .feed__paragraph, .causes__paragraph {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.paragraph-light, .feed__paragraph, .causes__paragraph {
   font-weight: 300;
 }
 
 .simple-button, .presentation__read-more-button {
   border: none;
   color: var(--white-color);
-  background-color: var(--gray-color-7);
+  background-color: var(--gray-color-9);
   font-weight: 700;
   font-size: 0.875rem;
-}
-
-button:hover {
-  cursor: pointer;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1390,27 +1428,146 @@ template {
 Here libraries finished
 
 */
-:root {
-  --pink-color: #ffe5e5;
-  --red-color: #e7402f;
-  --primary-color: #cc4d4d;
-  --accent-color: #773737;
-  --secondary-color: #222222;
-  --green-color: #32ba6d;
-  --white-color: #ffffff;
-  --gray-color-1: #eeeeee;
-  --gray-color-2: #bbbbbb;
-  --gray-color-3: #999999;
-  --gray-color-4: #666666;
-  --gray-color-5: #323232;
-  --gray-color-6: #2a2a2a;
-  --gray-color-7: #222222;
-  --modal-color: rgba(34, 34, 34, 0.95);
+.basic-slider__list {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
 }
 
+.basic-slider__item {
+  position: relative;
+}
+
+.basic-slider__button:hover {
+  opacity: 1;
+}
+
+.basic-slider__button {
+  height: 100%;
+  width: calc(100% - 1rem);
+  background: var(--primary-light-color);
+  position: absolute;
+  font-size: 3.625rem;
+  color: var(--white-color);
+  font-weight: 400;
+  opacity: 0;
+  transition: 0.25s;
+}
+
+/*========================== Subtitles with line below ==========================*/
+.subtitle-line-below {
+  margin-bottom: 2.8125rem;
+}
+
+.subtitle-line-below__list {
+  display: flex;
+}
+
+.feed .subtitle-line-below__item:nth-last-of-type(1) {
+  flex: 1;
+}
+
+.subtitle-line-below__item:nth-last-of-type(1) > .subtitle-line-below__button {
+  margin-left: 0.125rem;
+  padding: 0 0.25rem;
+}
+
+.subtitle-line-below__button {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.subtitle-line-below__button, .subtitle-line-below__text {
+  position: relative;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.subtitle-line-below__button:before, .subtitle-line-below__text:before {
+  content: "";
+  width: 100%;
+  height: 0.4375rem;
+  background: var(--primary-light-color);
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+}
+
+.subtitle-line-below__button:hover:before {
+  background: var(--primary-color);
+}
+
+.subtitle-line-below__button--active:before {
+  background: var(--primary-color);
+}
+
+.subtitle-line-below__text:before {
+  background-color: var(--primary-color);
+  width: 110%;
+  height: 0.25rem;
+}
+
+.subtitle-line-below__text {
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+/*========================== Calendar component ==========================*/
+.calendar {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--gray-color-0);
+  border: solid 0.0588235294rem var(--gray-color-1);
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.calendar:before {
+  content: "";
+  width: 100%;
+  height: 0.5625rem;
+  background-color: var(--primary-color);
+  position: absolute;
+  border: 0.0625rem solid var(--primary-color);
+  top: -0.0625rem;
+}
+
+.calendar::after {
+  content: "";
+  width: 1.1875rem;
+  height: 0.0625rem;
+  position: absolute;
+  margin: auto;
+  top: 0.25rem;
+  background-color: var(--white-color);
+}
+
+.calendar__date {
+  color: var(--gray-color-5);
+  line-height: 1.5rem;
+  padding-top: 0.5625rem;
+}
+
+.calendar__date--inline-text {
+  font-size: 0.75rem;
+  color: var(--gray-color-4);
+}
+
+.calendar__date > span {
+  color: var(--aqua-color);
+}
+
+/*========================== Header Section ==========================*/
 .header {
   width: 100%;
-  background: var(--gray-color-7);
+  background: var(--gray-color-9);
   height: 6.25rem;
   transition: 0.25s;
   overflow: hidden;
@@ -1423,7 +1580,7 @@ Here libraries finished
   content: "";
   width: 100%;
   height: 0.4375rem;
-  background: var(--accent-color);
+  background: var(--primary-dark-color);
   position: absolute;
   margin-left: -2rem;
 }
@@ -1458,11 +1615,11 @@ Here libraries finished
   content: "";
   width: 100%;
   height: 0.4375rem;
-  background: var(--accent-color);
+  background: var(--primary-dark-color);
   position: absolute;
   top: 0;
-  border-left: solid 0.125rem var(--gray-color-7);
-  border-right: solid 0.125rem var(--gray-color-7);
+  border-left: solid 0.125rem var(--gray-color-9);
+  border-right: solid 0.125rem var(--gray-color-9);
 }
 
 .header__item:hover {
@@ -1497,31 +1654,16 @@ Here libraries finished
   margin-top: 0.3125rem;
 }
 
-:root {
-  --pink-color: #ffe5e5;
-  --red-color: #e7402f;
-  --primary-color: #cc4d4d;
-  --accent-color: #773737;
-  --secondary-color: #222222;
-  --green-color: #32ba6d;
-  --white-color: #ffffff;
-  --gray-color-1: #eeeeee;
-  --gray-color-2: #bbbbbb;
-  --gray-color-3: #999999;
-  --gray-color-4: #666666;
-  --gray-color-5: #323232;
-  --gray-color-6: #2a2a2a;
-  --gray-color-7: #222222;
-  --modal-color: rgba(34, 34, 34, 0.95);
-}
-
+/*========================== Presentation section ==========================*/
 .presentation {
   background: var(--primary-color);
-  min-height: 34.0625rem;
-  display: flex;
-  align-items: center;
+  height: 34.0625rem;
   color: var(--white-color);
   padding-top: 6.25rem;
+}
+
+.presentation__container, .presentation__row {
+  height: 100%;
 }
 
 .presentation__title, .presentation__paragraph {
@@ -1539,6 +1681,8 @@ Here libraries finished
   padding: 1rem 1.25rem;
   line-height: 1.5625rem;
   margin: 0.625rem 0;
+  overflow-y: scroll;
+  max-height: 15rem;
 }
 
 .presentation__read-more-button {
@@ -1546,24 +1690,7 @@ Here libraries finished
   margin: 0.625rem 0;
 }
 
-:root {
-  --pink-color: #ffe5e5;
-  --red-color: #e7402f;
-  --primary-color: #cc4d4d;
-  --accent-color: #773737;
-  --secondary-color: #222222;
-  --green-color: #32ba6d;
-  --white-color: #ffffff;
-  --gray-color-1: #eeeeee;
-  --gray-color-2: #bbbbbb;
-  --gray-color-3: #999999;
-  --gray-color-4: #666666;
-  --gray-color-5: #323232;
-  --gray-color-6: #2a2a2a;
-  --gray-color-7: #222222;
-  --modal-color: rgba(34, 34, 34, 0.95);
-}
-
+/*========================== Causes Section ==========================*/
 .causes {
   background-color: var(--gray-color-1);
   height: 35.1875rem;
@@ -1581,8 +1708,30 @@ Here libraries finished
   top: 12.625rem;
 }
 
+.causes::after {
+  content: "";
+  height: 1.34375rem;
+  width: 100%;
+  background: var(--white-color);
+  bottom: 0;
+  position: absolute;
+  margin-left: -2rem;
+  z-index: 0;
+}
+
 .causes__container, .causes__row, .causes__item {
   height: 100%;
+}
+
+.causes__list {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+
+.causes__item-content {
+  margin-left: 1.875rem;
 }
 
 .causes__item {
@@ -1602,7 +1751,6 @@ Here libraries finished
 .causes__picture {
   width: 13.5625rem;
   height: 13.5625rem;
-  background-color: red;
   border-radius: 50%;
   overflow: hidden;
   margin: 0.625rem 0;
@@ -1612,6 +1760,7 @@ Here libraries finished
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .causes__title {
@@ -1629,7 +1778,8 @@ Here libraries finished
   background-color: var(--gray-color-1);
   border: solid 0.1875rem var(--white-color);
   position: absolute;
-  bottom: -1.34375rem;
+  bottom: 0;
+  z-index: 1;
 }
 
 .causes__button--active {
@@ -1643,6 +1793,267 @@ Here libraries finished
 .causes__paragraph {
   color: var(--gray-color-4);
   margin: 0.625rem 0;
+}
+
+/*========================== Feed Section - Gallery, Events, News ==========================*/
+.feed__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2.8125rem;
+}
+
+.feed__image {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.feed__content {
+  flex: 1;
+}
+
+.feed__title {
+  margin-bottom: 0.625rem;
+}
+
+.feed__paragraph {
+  color: var(--gray-color-4);
+}
+
+/*========================== Latest Events ==========================*/
+.gallery {
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
+}
+
+.events .feed__content {
+  margin-left: 0.875rem;
+}
+
+.events .feed__image {
+  height: 11.5625rem;
+}
+
+.events__row .feed__item:first-of-type .feed__image {
+  height: 17.8125rem;
+}
+
+/*========================== Latest News ==========================*/
+.news {
+  margin-bottom: 6.25rem;
+}
+
+.news__row .feed__item:first-of-type .feed__image {
+  width: 100%;
+  height: 10.9375rem;
+}
+
+.news__row .feed__item:nth-of-type(1n+2) .feed__content {
+  margin-left: 1.25rem;
+}
+
+.news__row .feed__item:nth-of-type(1n+2) .feed__paragraph {
+  margin-top: 0;
+}
+
+.news__row .feed__item:nth-of-type(1n+2) .calendar__date--inline-text {
+  line-height: 3rem;
+}
+
+.news .feed__image {
+  width: 6.25rem;
+  height: 5.3125rem;
+}
+
+.news .feed__title {
+  margin-bottom: 0.3rem;
+}
+
+.news .feed__paragraph {
+  margin-top: 0.5rem;
+}
+
+/*========================== Sponsors ==========================*/
+.sponsors {
+  margin-bottom: 6.25rem;
+}
+
+.sponsors__row {
+  position: relative;
+}
+
+.sponsors__row:before {
+  content: "";
+  width: 7rem;
+  height: 5.3125rem;
+  background: white;
+  background: linear-gradient(90deg, white 30%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.sponsors__row:after {
+  content: "";
+  width: 7rem;
+  height: 5.3125rem;
+  background: white;
+  background: linear-gradient(270deg, white 30%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+}
+
+.sponsors__row .feed__items {
+  padding: 0 4.625rem;
+  position: relative;
+}
+
+.sponsors__row .feed__item {
+  margin-bottom: 0;
+}
+
+.sponsors__row .feed__image {
+  width: 11.25rem;
+  height: 5.3125rem;
+  margin-left: 1.75rem;
+  margin-bottom: 0;
+  border: 0.0625rem solid var(--gray-color-1);
+}
+
+.sponsors__next-button {
+  position: absolute;
+  top: 7rem;
+  z-index: 2;
+  background: transparent;
+}
+
+.sponsors__next-button:last-of-type {
+  right: 0;
+  z-index: 2;
+  transform: rotate(180deg);
+}
+
+/*========================== Footer 1 ==========================*/
+.footer-1 {
+  border-top: 0.1875rem solid var(--primary-color);
+  background: var(--gray-color-9);
+  padding-top: 4.5625rem;
+  padding-bottom: 1.5625rem;
+}
+
+/*========================== About Footer ==========================*/
+.footer-1__about, .footer-1__news, .footer-1__flickr {
+  margin-bottom: 3rem;
+}
+
+.footer-1__about-icons {
+  display: flex;
+}
+
+.footer-1__about-paragraph, .footer-1__news-paragraph, .footer-1__twitter-paragraph {
+  color: var(--gray-color-2);
+}
+
+/*========================== News Footer ==========================*/
+.footer-1__news-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-1__news-item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.0625rem solid var(--gray-color-6);
+}
+
+.footer-1__news-image {
+  width: 5.3125rem;
+  height: 3.75rem;
+  float: left;
+  margin-right: 1rem;
+}
+
+/*========================== Flickr Footer ==========================*/
+.footer-1__flickr-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-1__flickr-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.footer-1__flickr-image {
+  width: 5.3125rem;
+  height: 4.375rem;
+}
+
+/*========================== Twitter Footer ==========================*/
+.footer-1__twitter-item {
+  display: flex;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.0625rem solid var(--gray-color-6);
+}
+
+.footer-1__twitter-image {
+  margin-right: 1rem;
+}
+
+.footer-1__twitter-tag {
+  float: left;
+  margin-right: 0.25rem;
+  color: var(--primary-color);
+  font-style: italic;
+}
+
+.footer-1__twitter-time {
+  color: var(--gray-color-4);
+}
+
+/*========================== Footer 2 ==========================*/
+hr {
+  border-color: var(--gray-color-5);
+}
+
+.footer-2 {
+  background: var(--gray-color-8);
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.footer-2__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--gray-color-3);
+}
+
+.footer-2__item:not(:last-child) {
+  border-right: 0.0625rem solid var(--gray-color-3);
+  padding-right: 1rem;
+  margin-right: 1rem;
+}
+
+.footer-2__list {
+  display: flex;
+}
+
+.footer-2__link {
+  color: var(--gray-color-3);
+}
+
+.footer-2__link:hover {
+  color: var(--white-color);
+}
+
+.footer-2__link--donate {
+  color: var(--green-color-2);
 }
 
 @media (max-width: 992px) {

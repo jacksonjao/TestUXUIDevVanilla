@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <defs>
+    <style>
+      .icon-option-background {
+        fill: #f0eff4;
+      }
+
+      .icon-option-foreground {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g transform="translate(-259 -317)">
+    <circle  class="icon-option-background" cx="13.5" cy="13.5" r="13.5" transform="translate(259 317)"/>
+    <g transform="translate(1 1)">
+      <rect class="icon-option-foreground" width="3" height="3" transform="translate(265 333)"/>
+      <rect class="icon-option-foreground" width="3" height="3" transform="translate(270 333)"/>
+      <rect class="icon-option-foreground" width="3" height="3" transform="translate(275 333)"/>
+      <rect class="icon-option-foreground" width="3" height="3" transform="translate(275 328)"/>
+      <rect class="icon-option-foreground" width="3" height="3" transform="translate(270 328)"/>
+      <rect class="icon-option-foreground" width="3" height="3" transform="translate(265 328)"/>
+      <rect class="icon-option-foreground" width="3" height="3" transform="translate(265 323)"/>
+      <rect class="icon-option-foreground" width="3" height="3" transform="translate(270 323)"/>
+      <rect class="icon-option-foreground" width="3" height="3" transform="translate(275 323)"/>
+    </g>
+  </g>
+</svg>

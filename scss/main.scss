@@ -6,12 +6,18 @@
 Here libraries finished
 
 */
+@import "components/basic-slider";
+@import "components/subtitle-line-below";
+@import "components/calendar";
 @import "components/header";
 @import "components/presentation";
 @import "components/causes";
+@import "components/feed";
+@import "components/footer";
 
 
 @media (max-width: 992px) {
   @include header--md();
   @include presentation--md();
 }
+

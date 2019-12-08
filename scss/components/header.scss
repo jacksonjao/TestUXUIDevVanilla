@@ -1,9 +1,10 @@
 @import "../variables";
 
+/*========================== Header Section ==========================*/
 
 .header {
   width: 100%;
-  background: $gray-color-7;
+  background: $gray-color-9;
   height: $header-height;
   transition: $transition;
   overflow: hidden;
@@ -11,16 +12,17 @@
   top: 0;
   z-index: 998;
 }
+
 .header:before {
   content: '';
   width: 100%;
   height: $header-border-size;
-  background: $accent-color;
+  background: $primary-dark-color;
   position: absolute;
   margin-left: -2rem;
 }
 
-.header__container{
+.header__container {
   max-width: 100%;
 }
 
@@ -47,16 +49,15 @@
 }
 
 
-
 .header__item:not(.header__donate):before {
   content: '';
   width: 100%;
   height: $header-border-size;
-  background: $accent-color;
+  background: $primary-dark-color;
   position: absolute;
   top: 0;
-  border-left: solid 0.125rem $gray-color-7;
-  border-right: solid 0.125rem $gray-color-7;
+  border-left: solid 0.125rem $gray-color-9;
+  border-right: solid 0.125rem $gray-color-9;
 }
 
 .header__item:hover {
@@ -114,7 +115,7 @@
     margin-top: $header-border-size*3;
   }
 
-  .header__item:before,  .header__item:hover::before, .header__item--active:before  {
+  .header__item:before, .header__item:hover::before, .header__item--active:before {
     display: none;
   }
 
@@ -126,7 +127,7 @@
 
 @mixin menu-icon {
 
-  #header__menu-button{
+  #header__menu-button {
     width: 2.5rem;
     height: 2rem;
     top: 1.5625rem;
@@ -136,11 +137,11 @@
     padding-top: 0.8rem;
   }
 
-  #header__menu-button:hover{
+  #header__menu-button:hover {
     cursor: pointer;
   }
 
-  .menu-icon{
+  .menu-icon {
     content: '';
     width: 2.5rem;
     height: 0.4rem;
@@ -149,33 +150,33 @@
     box-shadow: $accent-color 2px 2px 5px;
   }
 
-  .header__menu-icon, .header__menu-icon:before, .header__menu-icon:after{
+  .header__menu-icon, .header__menu-icon:before, .header__menu-icon:after {
     @extend .menu-icon;
     transition: $transition;
   }
 
-  .header__menu-icon{
+  .header__menu-icon {
     transition: $transition;
   }
 
-  .header__menu-icon:before{
+  .header__menu-icon:before {
     top: -0.8rem;
   }
 
-  .header__menu-icon:after{
+  .header__menu-icon:after {
     top: 0.8rem;
   }
 
-  .header__menu-icon--activated{
+  .header__menu-icon--activated {
     width: 0;
   }
 
-  .header__menu-icon--activated:before{
+  .header__menu-icon--activated:before {
     top: 0;
     transform: rotate(135deg);
   }
 
-  .header__menu-icon--activated:after{
+  .header__menu-icon--activated:after {
     top: 0;
     transform: rotate(-135deg);
   }

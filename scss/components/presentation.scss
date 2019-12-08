@@ -1,34 +1,41 @@
 @import "../variables";
 
-.presentation{
+/*========================== Presentation section ==========================*/
+
+.presentation {
   background: $primary-color;
-  min-height: $presentation-height;
-  display: flex;
-  align-items: center;
+  height: $presentation-height;
   color: $white-color;
   padding-top: $header-height;
 }
 
-.presentation__title, .presentation__paragraph{
+.presentation__container, .presentation__row {
+  height: 100%;
+}
+
+.presentation__title, .presentation__paragraph {
   background: $accent-color;
 }
 
-.presentation__title{
+.presentation__title {
   @extend .heading-1;
   margin: $margin 0;
   width: 100%;
   padding: 0.25rem 1.25rem;
 }
 
-.presentation__paragraph{
+.presentation__paragraph {
   @extend .paragraph;
   width: 100%;
   padding: 1rem 1.25rem;
   line-height: 1.5625rem;
   margin: $margin 0;
+  overflow-y: scroll;
+  max-height: 15rem;
 }
 
-.presentation__read-more-button{
+
+.presentation__read-more-button {
   @extend .simple-button;
   padding: 0.6rem 1.25rem;
   margin: $margin 0;
@@ -36,7 +43,7 @@
 
 
 @mixin presentation--md() {
-  .presentation{
+  .presentation {
     padding-top: 0;
   }
 }

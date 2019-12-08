@@ -1,0 +1,132 @@
+@import "../variables";
+
+/*========================== Footer 1 ==========================*/
+
+.footer-1{
+  border-top: 0.1875rem solid $primary-color;
+  background: $gray-color-9;
+  padding-top: 4.5625rem;
+  padding-bottom: 1.5625rem;
+}
+
+/*========================== About Footer ==========================*/
+
+
+.footer-1__about, .footer-1__news, .footer-1__flickr{
+  margin-bottom: 3rem;
+}
+
+.footer-1__about-icons{
+  display: flex;
+}
+
+.footer-1__about-paragraph, .footer-1__news-paragraph, .footer-1__twitter-paragraph{
+  @extend .paragraph;
+  color: $gray-color-2;
+}
+
+/*========================== News Footer ==========================*/
+
+
+.footer-1__news-list{
+ display: flex;
+  flex-direction: column;
+}
+.footer-1__news-item{
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.0625rem solid $gray-color-6;
+}
+
+.footer-1__news-image{
+  width: 5.3125rem;
+  height: 3.75rem;
+  float: left;
+  margin-right: 1rem;
+}
+
+/*========================== Flickr Footer ==========================*/
+
+.footer-1__flickr-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-1__flickr-item{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+.footer-1__flickr-image{
+  width: 5.3125rem;
+  height: 4.375rem;
+}
+
+/*========================== Twitter Footer ==========================*/
+
+.footer-1__twitter-item{
+  display: flex;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.0625rem solid $gray-color-6;
+}
+
+.footer-1__twitter-image{
+  margin-right: 1rem;
+}
+
+.footer-1__twitter-tag{
+  float: left;
+  margin-right: 0.25rem;
+  color: $primary-color;
+  font-style: italic;
+}
+
+.footer-1__twitter-time{
+  color: $gray-color-4;
+}
+
+/*========================== Footer 2 ==========================*/
+
+hr{
+  border-color: $gray-color-5;
+}
+
+.footer-2{
+  background: $gray-color-8;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.footer-2__content{
+  @extend .paragraph;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: $gray-color-3;
+}
+
+.footer-2__item:not(:last-child){
+  border-right: 0.0625rem solid $gray-color-3;
+  padding-right: 1rem;
+  margin-right: 1rem;
+}
+
+.footer-2__list{
+  display: flex;
+}
+
+.footer-2__link{
+  color: $gray-color-3;
+}
+
+.footer-2__link:hover{
+  color: $white-color;
+}
+
+.footer-2__link--donate{
+  color: $green-color-2;
+}
+

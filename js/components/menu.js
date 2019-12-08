@@ -4,6 +4,7 @@ class Menu {
     windowRef;
     scrollPosY;
     isMobile;
+
     constructor(actionButtonId, menuId, isMobile) {
         this.actionButtonRef = $(actionButtonId);
         this.menuRef = $(menuId);
@@ -17,18 +18,22 @@ class Menu {
     }
 
     hideWhenInPositionBigScreen(pos) {
-            if (!this.isMobile) {
-                let currentPos = pos;
-                if (this.scrollPosY > currentPos) {
-                    this.menuRef.css({top: '0'});
-                } else {
-                    this.menuRef.css({top: '-6.25rem'});
-                }
-                this.scrollPosY = currentPos;
+        if (!this.isMobile) {
+            let currentPos = pos;
+
+            if (this.scrollPosY > currentPos) {
+                this.menuRef.css({top: '0'});
+            } else if (pos > 445) {
+                this.menuRef.css({top: '-6.25rem'});
             }
+            this.scrollPosY = currentPos;
+        }
     }
 
     setDevice(isMobile) {
-            this.isMobile = isMobile;
+        this.isMobile = isMobile;
+        if (isMobile) {
+            this.menuRef.css({top: '0'});
+        }
     }
 }

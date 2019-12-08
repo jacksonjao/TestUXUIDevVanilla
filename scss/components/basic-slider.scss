@@ -1,0 +1,28 @@
+@import "../variables";
+
+.basic-slider__list {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+
+.basic-slider__item {
+  position: relative;
+}
+
+.basic-slider__button:hover {
+  opacity: 1;
+}
+
+.basic-slider__button {
+  height: 100%;
+  width: calc(100% - 1rem);
+  background: $primary-light-color;
+  position: absolute;
+  font-size: 3.625rem;
+  color: $white-color;
+  font-weight: $regular;
+  opacity: 0;
+  transition: $transition;
+}

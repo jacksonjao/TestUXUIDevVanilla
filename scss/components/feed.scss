@@ -1,0 +1,152 @@
+@import "../variables";
+
+/*========================== Feed Section - Gallery, Events, News ==========================*/
+
+
+.feed__item{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2.8125rem;
+}
+
+.feed__image{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.feed__content{
+  flex: 1;
+}
+
+.feed__title{
+  @extend .heading-3;
+  margin-bottom: $margin;
+
+}
+
+.feed__paragraph{
+  @extend .paragraph-light;
+  color: $gray-color-4;
+}
+
+
+/*========================== Latest Events ==========================*/
+
+.gallery{
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
+}
+
+.events .feed__content{
+  margin-left: 0.875rem;
+}
+
+.events .feed__image{
+  height: 11.5625rem;
+}
+
+.events__row .feed__item:first-of-type .feed__image{
+  height: 17.8125rem;
+}
+
+/*========================== Latest News ==========================*/
+
+.news{
+  margin-bottom: 6.25rem;
+}
+
+.news__row .feed__item:first-of-type .feed__image{
+  width: 100%;
+  height: 10.9375rem;
+}
+
+.news__row .feed__item:nth-of-type(1n+2) .feed__content{
+  margin-left: 1.25rem;
+}
+
+.news__row .feed__item:nth-of-type(1n+2) .feed__paragraph{
+  margin-top: 0;
+}
+
+.news__row .feed__item:nth-of-type(1n+2) .calendar__date--inline-text{
+  line-height: 3rem;
+}
+
+.news .feed__image{
+  width: 6.25rem;
+  height: 5.3125rem;
+}
+
+.news .feed__title{
+  margin-bottom: 0.3rem;
+}
+
+.news .feed__paragraph{
+  margin-top: 0.5rem;
+}
+
+
+/*========================== Sponsors ==========================*/
+
+.sponsors{
+  margin-bottom: 6.25rem;
+}
+
+.sponsors__row{
+  position: relative;
+}
+
+.sponsors__row:before{
+  content: '';
+  width: 7rem;
+  height: 5.3125rem;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.sponsors__row:after{
+  content: '';
+  width: 7rem;
+  height: 5.3125rem;
+  background: rgb(255,255,255);
+  background: linear-gradient(270deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+}
+.sponsors__row .feed__items{
+  padding: 0 4.625rem;
+  position: relative;
+}
+
+.sponsors__row .feed__item{
+  margin-bottom: 0;
+}
+
+
+.sponsors__row .feed__image{
+  width: 11.25rem;
+  height: 5.3125rem;
+  margin-left: 1.75rem;
+  margin-bottom: 0;
+  border: 0.0625rem solid $gray-color-1;
+}
+
+.sponsors__next-button{
+  position: absolute;
+  top: 7rem;
+  z-index: 2;
+  background: transparent;
+}
+
+.sponsors__next-button:last-of-type{
+  right: 0;
+  z-index: 2;
+  transform: rotate(180deg);
+}
+
+
