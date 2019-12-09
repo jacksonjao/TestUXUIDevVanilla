@@ -2279,6 +2279,7 @@ hr {
 
   .header {
     height: 0;
+    overflow: auto;
   }
 
   .header-fade-in {
@@ -2286,13 +2287,17 @@ hr {
     height: 100vh;
   }
 
+  .header__container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .header__container, .header__list {
     flex-direction: column;
   }
 
-  .header__container {
+  .header__container, .header__list, .header__logo {
     height: auto;
-    align-self: center;
   }
 
   .header__item {
@@ -2302,6 +2307,7 @@ hr {
   .header__logo {
     justify-content: center;
     margin-top: 1.3125rem;
+    flex: inherit;
   }
 
   .header__item:before, .header__item:hover::before, .header__item--active:before {
@@ -2310,6 +2316,7 @@ hr {
 
   .header__donate {
     background: inherit;
+    margin-bottom: 2rem;
   }
 
   .presentation {
