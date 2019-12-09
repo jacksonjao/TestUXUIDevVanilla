@@ -36,10 +36,12 @@ class Menu {
         }
     }
 
-    setDevice(isMobile) {
+    setDevice(isMobile, scroll) {
         this.isMobile = isMobile;
         if (isMobile) {
             this.menuRef.css({top: '0'});
+        }else if(this.isOpen){
+                this.toggleMenu(scroll)
         }
     }
 }

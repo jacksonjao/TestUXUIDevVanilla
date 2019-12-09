@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-<span id="header__menu-button" onclick="openMenu()"><div class="header__menu-icon"></div></span>
+<div id="header__menu-button" onclick="openMenu()"><div class="header__menu-icon"></div></div>
 
 
 <header class="header container-fluid" id="header">
@@ -310,38 +310,38 @@
                             </li>
                         </ul>
                     </nav>
-                    <button class="icon sponsors__next-button"><img src="assets/next-icon.svg" alt="Picture description"></button>
-                    <button class="icon sponsors__next-button"><img src="assets/next-icon.svg" alt="Picture description"></button>
-                    <ul class="basic-slider__list feed__items col-md-12 col-sm-12 col-xs-12 ">
-                        <li class="basic-slider__item feed__item">
+                    <button onclick="carrousel.previousItem()" class="icon sponsors__next-button"><img src="assets/next-icon.svg" alt="Picture description"></button>
+                    <button onclick="carrousel.nextItem()" class="icon sponsors__next-button"><img src="assets/next-icon.svg" alt="Picture description"></button>
+                    <ul id="sponsors-slider" class="feed__items col-md-12 col-sm-12 col-xs-12 ">
+                        <li class=" feed__item">
                             <figure class="feed__image">
                                 <img class="cover"
                                      src="https://www.cocacolaespana.es/content/dam/journey/es/es/private/historia/love-coca-cola/2015/logo-coca-cola-lead.png"
                                      alt="Picture description">
                             </figure>
                         </li>
-                        <li class="basic-slider__item feed__item  ">
+                        <li class=" feed__item  ">
                             <figure class="feed__image">
                                 <img class="cover"
                                      src="https://www.criptonoticias.com/wp-content/uploads/2016/06/Microsoft_Consensys_Identidad_Blockchain_Aplicaciones.png"
                                      alt="Picture description">
                             </figure>
                         </li>
-                        <li class="basic-slider__item  feed__item">
+                        <li class="  feed__item">
                             <figure class="feed__image">
                                 <img class="cover"
                                      src="https://www.dataversity.net/wp-content/uploads/2012/04/ap1.jpg"
                                      alt="Picture description">
                             </figure>
                         </li>
-                        <li class="basic-slider__item  feed__item">
+                        <li class="  feed__item">
                             <figure class="feed__image">
                                 <img class="cover"
                                      src="https://www.phonegatealert.org/wp-content/uploads/2019/07/Nokia-Logo-1080x675.jpg"
                                      alt="Picture description">
                             </figure>
                         </li>
-                        <li class="basic-slider__item  feed__item">
+                        <li class="  feed__item">
                             <figure class="feed__image">
                                 <img class="cover"
                                      src="https://www.gitex.com/__resource/companyProfiles/82940FE-D4F2-4162-98B6-166104446A1B-logo.png"
@@ -533,6 +533,7 @@
 <script type="text/javascript" src="js/libraries/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="js/components/menu.js"></script>
 <script type="text/javascript" src="js/components/scroll-section.js"></script>
+<script type="text/javascript" src="js/components/carrousel.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

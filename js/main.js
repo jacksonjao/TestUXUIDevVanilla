@@ -1,6 +1,6 @@
 const windowRef = $(window);
 const menu = new Menu('.header__menu-icon', '#header', windowRef.width() <= 992);
-
+const carrousel = new Carrousel($('#sponsors-slider'));
 const scrollToSection = new ScrollSection(500);
 
 windowRef.scroll(() => {
@@ -8,7 +8,7 @@ windowRef.scroll(() => {
 });
 
 windowRef.resize((event) => {
-    menu.setDevice(event.target.innerWidth <= 992);
+    menu.setDevice(event.target.innerWidth <= 992, scrollToSection);
 });
 
 function sectionSelected(element) {
@@ -26,3 +26,4 @@ function openMenu() {
 function darkMode() {
 $('body').toggleClass('dark-mode');
 }
+

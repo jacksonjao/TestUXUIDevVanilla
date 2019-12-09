@@ -12,9 +12,9 @@ $size-button: 2.6875rem;
 .causes:before {
   content: '';
   width: 100%;
-  border-top: 0.125rem solid #dfdfe1;
+  border-top: 0.125rem solid $border-causes-color;
   height: 0.125rem;
-  background: $white-color;
+  background:  $body-background;
   position: absolute;
   margin-left: -2rem;
   top: 12.625rem;
@@ -33,6 +33,10 @@ $size-button: 2.6875rem;
 
 .causes__container, .causes__row, .causes__item {
   height: 100%;
+}
+
+.causes__list::-webkit-scrollbar {
+  display: none;
 }
 
 .causes__list {

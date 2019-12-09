@@ -16,6 +16,7 @@
   --red-color: #e7402f;
   --primary-color: #cc4d4d;
   --primary-accent-color: rgba(136, 60, 60, 0.50);
+  --border-causes-color: #dfdfe1;
   --primary-shadow-color: #a72525;
   --primary-dark-color: #773737;
   --primary-light-color: rgba(204, 77, 77, 0.6);
@@ -46,6 +47,7 @@
   --font-color-header: #f0f0f0;
   --pink-color-2: #ebb8b8;
   --font-color-custom-black: #bbbbbb;
+  --border-causes-color: #393939;
   --red-color: #e7402f;
   --primary-color: #cc4d4d;
   --primary-accent-color: rgba(136, 60, 60, 0.50);
@@ -1779,6 +1781,7 @@ Here libraries finished
 .presentation__read-more-button {
   padding: 0.6rem 1.25rem;
   margin: 0.625rem 0;
+  border-radius: 0.1875rem;
 }
 
 /*========================== Causes Section ==========================*/
@@ -1791,9 +1794,9 @@ Here libraries finished
 .causes:before {
   content: "";
   width: 100%;
-  border-top: 0.125rem solid #dfdfe1;
+  border-top: 0.125rem solid var(--border-causes-color);
   height: 0.125rem;
-  background: var(--white-color);
+  background: var(--body-background);
   position: absolute;
   margin-left: -2rem;
   top: 12.625rem;
@@ -1812,6 +1815,10 @@ Here libraries finished
 
 .causes__container, .causes__row, .causes__item {
   height: 100%;
+}
+
+.causes__list::-webkit-scrollbar {
+  display: none;
 }
 
 .causes__list {
@@ -1993,21 +2000,35 @@ Here libraries finished
   right: 0;
 }
 
+.feed__items::-webkit-scrollbar {
+  display: none;
+}
+
 .sponsors__row .feed__items {
-  padding: 0 4.625rem;
   position: relative;
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+}
+
+.sponsors__row .feed__item:first-of-type {
+  margin-left: 0;
 }
 
 .sponsors__row .feed__item {
   margin-bottom: 0;
+  margin-left: 1.75rem;
 }
 
 .sponsors__row .feed__image {
   width: 11.25rem;
   height: 5.3125rem;
-  margin-left: 1.75rem;
   margin-bottom: 0;
   border: 0.0625rem solid var(--gray-color-1);
+}
+
+.sponsors__row .feed__image > .cover {
+  transition: 0.25s;
 }
 
 .sponsors__next-button {

@@ -123,22 +123,37 @@ padding: 0;
   bottom: 0;
   right: 0;
 }
+
+.feed__items::-webkit-scrollbar {
+    display: none;
+}
+
 .sponsors__row .feed__items{
-  padding: 0 4.625rem;
   position: relative;
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+}
+
+.sponsors__row .feed__item:first-of-type{
+  margin-left: 0;
 }
 
 .sponsors__row .feed__item{
   margin-bottom: 0;
+  margin-left: 1.75rem;
 }
 
 
 .sponsors__row .feed__image{
   width: 11.25rem;
   height: 5.3125rem;
-  margin-left: 1.75rem;
   margin-bottom: 0;
   border: 0.0625rem solid $gray-color-1;
+}
+.sponsors__row .feed__image>.cover{
+  transition: $transition;
+
 }
 
 .sponsors__next-button{
