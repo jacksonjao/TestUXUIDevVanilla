@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charity</title>
+    <!-- Meta -->
+    <meta name="description" content="Creative Clean Charity Design"/>
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Charity"/>
+    <meta property="og:url" content="Charity.com"/>
+    <meta property="og:image" content="charity.jpg"/>
+    <meta property="og:description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan pretium leo ut consectetur. Vestibulum a mattis ipsum. Nunc turpis velit, consequat quis ipsum eu, fermentum adipiscing ligula."/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="scss/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<span id="header__menu-button" onclick="menu.toggleMenu()"><div class="header__menu-icon"></div></span>
+
+
+<header class="header container-fluid" id="header">
+    <nav class="container header__container" aria-label="gallery">
+        <span id="logo" title="Go to Charity" class="header__logo">Charity.</span>
+        <ul class="header__list">
+            <li class="header__item header__item--active" onclick="sectionSelected(this)">
+                <a href="index.html" rel="sectionAnchor" class="header__link">Home</a>
+            </li>
+            <li class="header__item" onclick="sectionSelected(this)">
+                <a href="index.html#causes" rel="sectionAnchor" class="header__link">Our causes</a>
+            </li>
+            <li class="header__item" onclick="sectionSelected(this)">
+                <a href="index.html#events" rel="sectionAnchor" class="header__link">Events</a>
+            </li>
+            <li class="header__item" onclick="sectionSelected(this)">
+                <a href="index.html#news" rel="sectionAnchor" class="header__link">News</a>
+            </li>
+            <li class="header__item">
+                <a href="" rel="sectionAnchor" class="header__link">Directors</a>
+            </li>
+            <li class="header__item">
+                <a href="" rel="sectionAnchor" class="header__link">Features</a>
+            </li>
+            <li class="header__item header__donate">
+                <img class="icon header__donate-icon"
+                     src="assets/heart-icon.svg"
+                     aria-hidden="true"
+                     alt="icon represents donate">
+                <a href="" class="header__link header__link--donate">Donate!</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="contact" class="contact">
+
+    <div class="contact__header container-fluid">
+        <div class="container col-md-12 col-sm-12  col-xs-12">
+            <div class="row contact__row">
+                <h1 class="contact__title ">Contact</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24190.724615111267!2d-74.01299937951332!3d40.72152590246128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259885419838b%3A0x2d39c2f6ed6db3c!2sLower%20Manhattan%2C%20Nueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sco!4v1575849479934!5m2!1ses-419!2sco"
+                width="100%" height="490" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+
+
+    <div class="container-fluid">
+        <section class="container col-md-12 col-sm-12  col-xs-12 contact__section">
+            <div class="row">
+                <form action="" class="contact__form col-md-9 col-sm-9 col-xs-12">
+                    <h1 class="contact__form-title heading-5">Payment form</h1>
+                    <div class="break"></div>
+                    <label class="contact__form-label col-md-4 col-sm-9 col-xs-12">
+                        <div class="label">Your name <span>(required)</span></div>
+                        <input class="contact__form-input" type="text" required>
+                    </label>
+                    <label class="contact__form-label col-md-4 col-sm-9 col-xs-12">
+                        <div class="label">Email <span>(required)</span></div>
+                        <input class="contact__form-input" type="email" required>
+                    </label>
+                    <label class="contact__form-label col-md-4 col-sm-9 col-xs-12">
+                        <div class="label">Email <span></span></div>
+                        <input class="contact__form-input" type="text">
+                    </label>
+
+                    <label class="contact__form-label col-md-12  col-sm-9 col-xs-12 ">
+                        <div class="label">Message <span>(required)</span></div>
+                        <textarea class="contact__message" type="text" required></textarea>
+                    </label>
+                    <div class="break"></div>
+                    <button class="contact__form-button" type="submit">Send Message</button>
+                </form>
+
+                <div class="contact__info col-md-3 col-sm-3 col-xs-12">
+                    <h1 class="col-md-12 col-sm-12 col-xs-12 contact__info-title heading-5">Contact info</h1>
+                    <ul class="col-md-12 col-sm-12 col-xs-12 ">
+                        <li class="contact__info-item"><a
+                                href="https://www.google.com/maps?ll=40.721495,-73.99549&z=13&t=m&hl=es-419&gl=CO&mapclient=embed&cid=14799082352807939716"
+                                target="_blank" class="contact__info-link"><img
+                                src="assets/dribbble-icon.png" alt="Picture description">
+                            <p>30 ThemeForest St, USA</p></a></li>
+                        <li class="contact__info-item"><a href="tel:+2-111-321-125-4" class="contact__info-link"><img
+                                src="assets/social-icon.png" alt="Picture description">
+                            <p>+2 111 321 125 4</p></a></li>
+                        <li class="contact__info-item"><a href="mailto:info@domain.com" class="contact__info-link"><img
+                                src="assets/twitter-icon.png" alt="Picture description">
+                            <p>info@domain.com</p></a></li>
+                    </ul>
+
+                    <h1 class="col-md-12 col-sm-12 col-xs-12  contact__subscribe-title heading-5">SUBSCRIBE</h1>
+                    <ul class="col-md-12 col-sm-12 col-xs-12 contact__subscribe-list">
+                        <li class="contact__subscribe-item"><a href=""><img
+                                src="assets/dribbble-icon.png" alt="Picture description"></a></li>
+                        <li class="contact__subscribe-item"><a href=""><img
+                                src="assets/social-icon.png" alt="Picture description"></a></li>
+                        <li class="contact__subscribe-item"><a href=""><img
+                                src="assets/twitter-icon.png" alt="Picture description"></a></li>
+                        <li class="contact__subscribe-item"><a href=""><img
+                                src="assets/facebook-icon.png" alt="Picture description"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container-fluid footer-1">
+        <div class="container col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <section class="footer-1__about col-md-3 col-sm-6 col-xs-12">
+                    <div class=" subtitle-line-below col-md-12 col-sm-12  col-xs-12">
+                        <ul class="subtitle-line-below__list">
+                            <li class="subtitle-line-below__item ">
+                                <h4 class="start-md start-sm start-xs subtitle-line-below__text">ABOUT</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="footer-1__about-paragraph col-md col-sm col-xs">
+                        Aliquam erat volutpat. Aenean sagittis dui vestibulum quam accumsan viverra Mauris velit dolor,
+                        posuere non tempor eu.
+                    </p>
+                    <br>
+                    <ul class="footer-1__about-icons">
+                        <li class="about__icon"><a href="" class="col-md col-sm col-xs"><img
+                                src="assets/dribbble-icon.png" alt="Picture description"></a></li>
+                        <li class="about__icon"><a href="" class="col-col-md col-sm col-xs"><img
+                                src="assets/social-icon.png" alt="Picture description"></a></li>
+                        <li class="about__icon"><a href="" class="col-md col-sm col-xs"><img
+                                src="assets/twitter-icon.png" alt="Picture description"></a></li>
+                        <li class="about__icon"><a href="" class="col-md col-sm col-xs"><img
+                                src="assets/facebook-icon.png" alt="Picture description"></a></li>
+                    </ul>
+                </section>
+                <section class="footer-1__news col-md-3 col-sm-6 col-xs-12">
+                    <div class=" subtitle-line-below col-md-12 col-sm-12  col-xs-12">
+                        <ul class="subtitle-line-below__list">
+                            <li class="subtitle-line-below__item ">
+                                <h4 class="start-md start-sm start-xs subtitle-line-below__text">LATEST NEWS</h4>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul class="footer-1__news-list col-md col-sm col-xs">
+                        <li class="footer-1__news-item">
+                            <figure class="footer-1__news-image">
+                                <img class="cover"
+                                     src="https://cdn.pixabay.com/photo/2016/10/08/14/51/travel-1723863_1280.jpg"
+                                     alt="Picture description">
+                            </figure>
+                            <p class="footer-1__news-paragraph">Aliquam erat volutpat. Aenean sagittis dui accumsan
+                                viverra.</p>
+                        </li>
+                        <li class="footer-1__news-item">
+                            <figure class="footer-1__news-image">
+                                <img class="cover"
+                                     src="https://cdn.pixabay.com/photo/2015/10/12/15/26/woman-984537_1280.jpg"
+                                     alt="Picture description">
+                            </figure>
+                            <p class="footer-1__news-paragraph">Aliquam erat volutpat. Aenean sagittis dui accumsan
+                                viverra.</p>
+                        </li>
+                        <li class="footer-1__news-item">
+                            <figure class="footer-1__news-image">
+                                <img class="cover"
+                                     src="https://cdn.pixabay.com/photo/2016/01/24/12/53/indian-1158803_1280.jpg"
+                                     alt="Picture description">
+                            </figure>
+                            <p class="footer-1__news-paragraph">Aliquam erat volutpat. Aenean sagittis dui accumsan
+                                viverra.</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="footer-1__flickr col-md-3 col-sm-6 col-xs-12">
+                    <div class=" subtitle-line-below col-md-12 col-sm-12  col-xs-12">
+                        <ul class="subtitle-line-below__list">
+                            <li class="subtitle-line-below__item ">
+                                <h4 class="start-md start-sm start-xs subtitle-line-below__text">Flickr</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="footer-1__flickr-list col-md col-sm col-xs">
+                        <li class="footer-1__flickr-item">
+                            <figure class="footer-1__flickr-image">
+                                <img class="cover"
+                                     src="https://cdn.pixabay.com/photo/2018/03/03/06/26/child-3194977_1280.jpg"
+                                     alt="Picture description">
+                            </figure>
+                        </li>
+                        <li class="footer-1__flickr-item">
+                            <figure class="footer-1__flickr-image">
+                                <img class="cover"
+                                     src="https://cdn.pixabay.com/photo/2014/04/02/14/48/children-306607_1280.jpg"
+                                     alt="Picture description">
+                            </figure>
+                        </li>
+                        <li class="footer-1__flickr-item">
+                            <figure class="footer-1__flickr-image">
+                                <img class="cover"
+                                     src="https://cdn.pixabay.com/photo/2016/01/03/09/50/indian-1119239_1280.jpg"
+                                     alt="Picture description">
+                            </figure>
+                        </li>
+                        <li class="footer-1__flickr-item">
+                            <figure class="footer-1__flickr-image">
+                                <img class="cover"
+                                     src="https://cdn.pixabay.com/photo/2014/08/27/06/14/children-428909_1280.jpg"
+                                     alt="Picture description">
+                            </figure>
+                        </li>
+                        <li class="footer-1__flickr-item">
+                            <figure class="footer-1__flickr-image">
+                                <img class="cover"
+                                     src="https://cdn.pixabay.com/photo/2015/10/12/15/26/woman-984537_1280.jpg"
+                                     alt="Picture description">
+                            </figure>
+                        </li>
+                        <li class="footer-1__flickr-item">
+                            <figure class="footer-1__flickr-image">
+                                <img class="cover"
+                                     src="https://cdn.pixabay.com/photo/2015/03/04/13/43/old-man-658798_1280.jpg"
+                                     alt="Picture description">
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+                <section class="footer-1__twitter col-md-3 col-sm-6 col-xs-12">
+                    <div class=" subtitle-line-below col-md-12 col-sm-12  col-xs-12">
+                        <ul class="subtitle-line-below__list">
+                            <li class="subtitle-line-below__item ">
+                                <h4 class="start-md start-sm start-xs subtitle-line-below__text">Twitter</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="footer-1__twitter-list col-md col-sm col-xs">
+                        <li class="footer-1__twitter-item">
+                            <div class="footer-1__twitter-image">
+                                <img src="assets/twitter-bird-icon.png" alt="Picture description">
+                            </div>
+                            <div class="footer-1__twitter-paragraph">
+                                <a class="footer-1__twitter-tag" href="">@ENVATO </a>
+                                <p class="footer-1__twitter-paragraph">
+                                    There are many variations of passag ...<br>
+                                    <span class="footer-1__twitter-time"> 12 minute ago </span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="footer-1__twitter-item">
+                            <div class="footer-1__twitter-image">
+                                <img src="assets/twitter-bird-icon.png" alt="Picture description">
+                            </div>
+                            <div class="footer-1__twitter-paragraph">
+                                <a class="footer-1__twitter-tag" href="">@ENVATO </a>
+                                <p class="footer-1__twitter-paragraph">
+                                    There are many variations of passag ...<br>
+                                    <span class="footer-1__twitter-time"> 12 minute ago </span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid footer-2">
+        <div class="container col-md-12 col-sm-12 col-xs-12">
+            <div class="footer-2__content col-md-12 col-sm-12 col-xs-12">
+                <p class="footer-2__copyrights">Copyrights © 2013 & All Rights Reserved </p>
+                <ul class="footer-2__list">
+                    <li class="footer-2__item"><a class="footer-2__link" href="">TERMS</a></li>
+                    <li class="footer-2__item"><a class="footer-2__link" href="">FAQs</a></li>
+                    <li class="footer-2__item"><a class="footer-2__link" href="contact.html">CONTACT</a></li>
+                    <li class="footer-2__item"><a class="footer-2__link  footer-2__link--donate" href="">DONATE</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="js/libraries/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/components/menu.js"></script>
+<script type="text/javascript" src="js/components/scroll-section.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -7,10 +7,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 :root {
   --pink-color: #ffe5e5;
   --red-color: #e7402f;
   --primary-color: #cc4d4d;
+  --primary-shadow-color: #a72525;
   --primary-dark-color: #773737;
   --primary-light-color: rgba(204, 77, 77, 0.6);
   --accent-color: rgba(0, 0, 0, 0.5);
@@ -18,6 +20,8 @@
   --green-color: #32ba6d;
   --green-color-2: #97b16b;
   --aqua-color: #009999;
+  --background-input-color: #f9f9f9;
+  --border-input-color: #ebebeb;
   --white-color: #ffffff;
   --gray-color-0: #fbfbfb;
   --gray-color-1: #f0f0f0;
@@ -56,9 +60,20 @@ button {
   background: transparent;
 }
 
-button:focus, a:focus {
+button:focus, a:focus, input:focus, textarea:focus {
   outline: none;
   filter: brightness(0.8);
+}
+
+input, textarea {
+  border: solid 0.0625rem var(--border-input-color);
+  background: var(--background-input-color);
+  min-height: 1.875rem;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 .basic-slider__list::-webkit-scrollbar, .gallery__list::-webkit-scrollbar {
@@ -68,6 +83,12 @@ button:focus, a:focus {
 .small-font-label, .causes__button, .header__link {
   font-weight: 600;
   font-size: 0.75rem;
+}
+
+.label, label {
+  color: var(--gray-color-4);
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .icon {
@@ -101,6 +122,14 @@ button:focus, a:focus {
   line-height: 1.3rem;
 }
 
+.heading-5 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--gray-color-4);
+  text-transform: uppercase;
+  height: auto;
+}
+
 .cover {
   width: 100%;
   height: 100%;
@@ -112,7 +141,7 @@ figure {
   background: var(--gray-color-2);
 }
 
-.paragraph, .footer-2__content, .footer-1__about-paragraph, .footer-1__news-paragraph, .footer-1__twitter-paragraph, .presentation__paragraph, .calendar__date--inline-text, .paragraph-light, .feed__paragraph, .causes__paragraph {
+.paragraph, .contact__form-label .label > span, .contact__form-label label > span, .footer-2__content, .footer-1__about-paragraph, .footer-1__news-paragraph, .footer-1__twitter-paragraph, .presentation__paragraph, .calendar__date--inline-text, .paragraph-light, .feed__paragraph, .causes__paragraph {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5rem;
@@ -122,7 +151,7 @@ figure {
   font-weight: 300;
 }
 
-.simple-button, .presentation__read-more-button {
+.simple-button, .contact__form-button, .presentation__read-more-button {
   border: none;
   color: var(--white-color);
   background-color: var(--gray-color-9);
@@ -1666,10 +1695,11 @@ Here libraries finished
 
 /*========================== Presentation section ==========================*/
 .presentation {
-  background: var(--primary-color);
   height: 34.0625rem;
   color: var(--white-color);
   padding-top: 6.25rem;
+  background: url("https://cdn.pixabay.com/photo/2015/08/05/13/55/children-876543_1280.jpg") no-repeat fixed bottom;
+  background-size: cover;
 }
 
 .presentation__container, .presentation__row {
@@ -2069,6 +2099,94 @@ hr {
   color: var(--green-color-2);
 }
 
+/*========================== Contact ==========================*/
+.contact__header {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding-top: 6.25rem;
+}
+
+.contact__title {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.3529411765rem;
+}
+
+/*========================== Contact Form ==========================*/
+.contact__section {
+  padding-top: 3.75rem;
+  padding-bottom: 5.625rem;
+}
+
+.contact__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact__form-label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.1875rem;
+}
+
+.contact__form-label .label > span, .contact__form-label label > span {
+  font-size: 0.75rem;
+}
+
+.contact__form-input {
+  margin-top: 0.625rem;
+}
+
+.contact__message {
+  min-height: 10rem;
+}
+
+.contact__form-button {
+  background: var(--primary-color);
+  margin-left: 0.5rem;
+  padding: 0.75rem 1.5625rem;
+  border-radius: 0.1875rem;
+  box-shadow: var(--primary-shadow-color) 0 0.25rem 0;
+  margin-bottom: 1.5625rem;
+  margin-top: 2.125rem;
+}
+
+/*========================== Contact Info ==========================*/
+.contact__info-item {
+  margin-bottom: 0.75rem;
+}
+
+.contact__info-link {
+  display: flex;
+  align-items: center;
+}
+
+.contact__info-link > p {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--gray-color-4);
+}
+
+.contact__info-title, .contact__subscribe-title {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+/*========================== Contact Subscribe ==========================*/
+.contact__subscribe-title {
+  margin-top: 3rem;
+}
+
+.contact__subscribe-list {
+  display: flex;
+}
+
+.contact__subscribe-item {
+  margin-right: 0.5rem;
+}
+
 @media (max-width: 992px) {
   #header__menu-button {
     width: 2.5rem;
@@ -2149,6 +2267,10 @@ hr {
   }
 
   .presentation {
+    padding-top: 0;
+  }
+
+  .contact__header {
     padding-top: 0;
   }
 }

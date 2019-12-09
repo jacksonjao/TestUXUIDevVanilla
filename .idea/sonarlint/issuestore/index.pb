@@ -20,10 +20,6 @@ K
 scss/main.scss,9/0/90de66ec70bf430961a72ce5d436a8193a0100e0
 K
 scss/components/causes.scss,4/0/400dc4c78cc41dd76292d0b4b4de1232280494d2
-V
-&scss/components/splitter-subtitle.scss,d/5/d587b29e1642acf72ac4c9677cfcdb779b117228
-L
-scss/components/gallery.scss,c/4/c4bbc3cea7a3d061f13aad1af086ca9935fdd8f5
 :
 
 index.html,f/6/f6013a00b362253c64368d6eebc50ea2131754e2

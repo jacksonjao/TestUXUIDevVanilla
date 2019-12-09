@@ -14,10 +14,12 @@ Here libraries finished
 @import "components/causes";
 @import "components/feed";
 @import "components/footer";
+@import "components/contact";
 
 
 @media (max-width: 992px) {
   @include header--md();
   @include presentation--md();
+  @include contact--md;
 }
 

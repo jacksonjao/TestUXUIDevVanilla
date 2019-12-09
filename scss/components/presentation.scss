@@ -3,10 +3,11 @@
 /*========================== Presentation section ==========================*/
 
 .presentation {
-  background: $primary-color;
   height: $presentation-height;
   color: $white-color;
   padding-top: $header-height;
+  background: url("https://cdn.pixabay.com/photo/2015/08/05/13/55/children-876543_1280.jpg") no-repeat fixed bottom;
+  background-size: cover;
 }
 
 .presentation__container, .presentation__row {

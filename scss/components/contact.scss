@@ -1,0 +1,107 @@
+@import "../variables";
+
+/*========================== Contact ==========================*/
+
+
+
+.contact__header{
+  background: $primary-color;
+  color: $white-color;
+  padding-top: $header-height;
+}
+
+.contact__title{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-weight: $semi-bold;
+  font-size: 2.3529411765rem;
+}
+
+
+/*========================== Contact Form ==========================*/
+
+.contact__section{
+  padding-top: 3.75rem;
+  padding-bottom: 5.625rem;
+}
+
+.contact__form{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.contact__form-label{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.1875rem;
+}
+
+.contact__form-label .label>span{
+  @extend .paragraph;
+  font-size: 0.75rem;
+}
+
+.contact__form-input{
+  margin-top: 0.625rem;
+}
+
+.contact__message{
+  min-height: 10rem;
+}
+
+.contact__form-button{
+  @extend .simple-button;
+  background: $primary-color;
+  margin-left: 0.5rem;
+  padding: 0.75rem 1.5625rem;
+  border-radius: 0.1875rem;
+  box-shadow: $primary-shadow 0 0.25rem 0;
+  margin-bottom: 1.5625rem;
+  margin-top: 2.125rem;
+}
+
+/*========================== Contact Info ==========================*/
+
+.contact__info-item{
+  margin-bottom: 0.75rem;
+}
+
+.contact__info-link{
+  display: flex;
+  align-items: center;
+}
+
+.contact__info-link>p{
+ margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: $gray-color-4;
+}
+
+.contact__info-title, .contact__subscribe-title{
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+/*========================== Contact Subscribe ==========================*/
+
+.contact__subscribe-title{
+  margin-top: 3rem;
+}
+
+.contact__subscribe-list{
+  display: flex;
+}
+.contact__subscribe-item{
+  margin-right: 0.5rem;
+}
+
+
+@mixin contact--md() {
+  .contact__header {
+    padding-top: 0;
+  }
+}
+
