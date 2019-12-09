@@ -10,6 +10,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 :root {
   --pink-color: #ffe5e5;
+  --font-color-header: #f0f0f0;
+  --font-color-custom-black: #000000;
   --pink-color-2: #ebb8b8;
   --red-color: #e7402f;
   --primary-color: #cc4d4d;
@@ -25,6 +27,8 @@
   --background-input-color: #f9f9f9;
   --border-input-color: #ebebeb;
   --white-color: #ffffff;
+  --body-background: #ffffff;
+  --body-background-contrast: #ffffff;
   --gray-color-0: #fbfbfb;
   --gray-color-1: #f0f0f0;
   --gray-color-2: #bbbbbb;
@@ -35,6 +39,44 @@
   --gray-color-7: #323232;
   --gray-color-8: #2a2a2a;
   --gray-color-9: #222222;
+}
+
+.dark-mode {
+  --pink-color: #ffe5e5;
+  --font-color-header: #f0f0f0;
+  --pink-color-2: #ebb8b8;
+  --font-color-custom-black: #bbbbbb;
+  --red-color: #e7402f;
+  --primary-color: #cc4d4d;
+  --primary-accent-color: rgba(136, 60, 60, 0.50);
+  --primary-shadow-color: #a72525;
+  --primary-dark-color: #773737;
+  --primary-light-color: rgba(204, 77, 77, 0.6);
+  --accent-color: rgba(0, 0, 0, 0.5);
+  --secondary-color: #222222;
+  --green-color: #32ba6d;
+  --green-color-2: #97b16b;
+  --aqua-color: #009999;
+  --background-input-color: #393939;
+  --border-input-color: #ebebeb;
+  --body-background: #1c1c1e;
+  --body-background-contrast: #1c1c1e;
+  --white-color: #ffffff;
+  --gray-color-0: #393939;
+  --gray-color-1: #2a2a2a;
+  --gray-color-2: #bbbbbb;
+  --gray-color-3: #999999;
+  --gray-color-4: #bbbbbb;
+  --gray-color-5: #bbbbbb;
+  --gray-color-6: #393939;
+  --gray-color-7: #bbbbbb;
+  --gray-color-8: #2a2a2a;
+  --gray-color-9: #222222;
+}
+
+body {
+  background-color: var(--body-background);
+  transition: 0.25s;
 }
 
 * {
@@ -75,6 +117,7 @@ input, textarea {
   border: solid 0.0625rem var(--border-input-color);
   background: var(--background-input-color);
   min-height: 1.875rem;
+  color: var(--font-color-header);
 }
 
 .break {
@@ -100,10 +143,6 @@ input, textarea {
 .icon {
   width: 1.875rem;
   height: 1.875rem;
-}
-
-.icon-heart {
-  mask: url(../assets/heart-icon.svg);
 }
 
 .heading-1, .presentation__title {
@@ -1520,6 +1559,7 @@ Here libraries finished
 .subtitle-line-below__button {
   font-size: 1.5rem;
   width: 100%;
+  color: var(--gray-color-7);
 }
 
 .subtitle-line-below__button, .subtitle-line-below__text {
@@ -1651,7 +1691,7 @@ Here libraries finished
   justify-content: center;
   align-items: center;
   padding: 0 1.5625rem;
-  color: var(--gray-color-1);
+  color: var(--font-color-header);
   position: relative;
 }
 
@@ -1763,7 +1803,7 @@ Here libraries finished
   content: "";
   height: 1.34375rem;
   width: 100%;
-  background: var(--white-color);
+  background: var(--body-background);
   bottom: 0;
   position: absolute;
   margin-left: -2rem;
@@ -1821,7 +1861,7 @@ Here libraries finished
   border-radius: 50%;
   color: var(--white-color);
   background-color: var(--gray-color-1);
-  border: solid 0.1875rem var(--white-color);
+  border: solid 0.1875rem var(--body-background);
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -1858,6 +1898,7 @@ Here libraries finished
 
 .feed__title {
   margin-bottom: 0.625rem;
+  color: var(--font-color-custom-black);
 }
 
 .feed__paragraph {
@@ -1937,8 +1978,6 @@ Here libraries finished
   content: "";
   width: 7rem;
   height: 5.3125rem;
-  background: white;
-  background: linear-gradient(90deg, white 30%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -1948,8 +1987,6 @@ Here libraries finished
   content: "";
   width: 7rem;
   height: 5.3125rem;
-  background: white;
-  background: linear-gradient(270deg, white 30%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -2069,6 +2106,7 @@ Here libraries finished
 
 /*========================== Footer 2 ==========================*/
 hr {
+  border-top: none;
   border-color: var(--gray-color-5);
 }
 

@@ -2,6 +2,8 @@
 
 :root {
   --pink-color: #ffe5e5;
+  --font-color-header: #f0f0f0;
+  --font-color-custom-black: #000000;
   --pink-color-2: #ebb8b8;
   --red-color: #e7402f;
   --primary-color: #cc4d4d;
@@ -17,6 +19,8 @@
   --background-input-color: #f9f9f9;
   --border-input-color: #ebebeb;
   --white-color: #ffffff;
+  --body-background: #ffffff;
+  --body-background-contrast: #ffffff;
   --gray-color-0: #fbfbfb;
   --gray-color-1: #f0f0f0;
   --gray-color-2: #bbbbbb;
@@ -27,6 +31,44 @@
   --gray-color-7: #323232;
   --gray-color-8: #2a2a2a;
   --gray-color-9: #222222;
+}
+
+.dark-mode{
+  --pink-color: #ffe5e5;
+  --font-color-header: #f0f0f0;
+  --pink-color-2: #ebb8b8;
+  --font-color-custom-black: #bbbbbb;
+  --red-color: #e7402f;
+  --primary-color: #cc4d4d;
+  --primary-accent-color: rgba(136, 60, 60, 0.50);
+  --primary-shadow-color: #a72525;
+  --primary-dark-color: #773737;
+  --primary-light-color: rgba(204, 77, 77, 0.6);
+  --accent-color: rgba(0, 0, 0, 0.5);
+  --secondary-color: #222222;
+  --green-color: #32ba6d;
+  --green-color-2: #97b16b;
+  --aqua-color: #009999;
+  --background-input-color: #393939;
+  --border-input-color: #ebebeb;
+  --body-background: #1c1c1e;
+  --body-background-contrast: #1c1c1e;
+  --white-color: #ffffff;
+  --gray-color-0: #393939;
+  --gray-color-1: #2a2a2a;
+  --gray-color-2: #bbbbbb;
+  --gray-color-3: #999999;
+  --gray-color-4: #bbbbbb;
+  --gray-color-5: #bbbbbb;
+  --gray-color-6: #393939;
+  --gray-color-7:  #bbbbbb;
+  --gray-color-8: #2a2a2a;
+  --gray-color-9: #222222;
+}
+
+body{
+background-color: $body-background;
+  transition: $transition;
 }
 
 * {
@@ -70,6 +112,7 @@ input, textarea {
   border: solid 0.0625rem $border-input-color;
   background: $background-input-color;
   min-height: 1.875rem;
+  color: $font-color-header;
 }
 
 .break {
@@ -97,9 +140,6 @@ input, textarea {
   height: 1.875rem;
 }
 
-.icon-heart {
-  mask: url(../assets/heart-icon.svg);
-}
 
 .heading-1 {
   font-weight: $regular;

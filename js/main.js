@@ -23,3 +23,6 @@ function openMenu() {
     menu.toggleMenu(scrollToSection);
 }
 
+function darkMode() {
+$('body').toggleClass('dark-mode');
+}

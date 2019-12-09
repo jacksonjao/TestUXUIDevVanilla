@@ -21,7 +21,7 @@
 .feed__title{
   @extend .heading-3;
   margin-bottom: $margin;
-
+color: $font-color-custom-black;
 }
 
 .feed__paragraph{
@@ -109,8 +109,6 @@ padding: 0;
   content: '';
   width: 7rem;
   height: 5.3125rem;
-  background: rgb(255,255,255);
-  background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -120,8 +118,6 @@ padding: 0;
   content: '';
   width: 7rem;
   height: 5.3125rem;
-  background: rgb(255,255,255);
-  background: linear-gradient(270deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
   position: absolute;
   z-index: 1;
   bottom: 0;
