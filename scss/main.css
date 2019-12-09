@@ -10,8 +10,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap");
 :root {
   --pink-color: #ffe5e5;
+  --pink-color-2: #ebb8b8;
   --red-color: #e7402f;
   --primary-color: #cc4d4d;
+  --primary-accent-color: rgba(136, 60, 60, 0.50);
   --primary-shadow-color: #a72525;
   --primary-dark-color: #773737;
   --primary-light-color: rgba(204, 77, 77, 0.6);
@@ -128,6 +130,11 @@ input, textarea {
   color: var(--gray-color-4);
   text-transform: uppercase;
   height: auto;
+}
+
+.block-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
 }
 
 .cover {
@@ -1786,6 +1793,7 @@ Here libraries finished
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
 }
 
 .causes__picture {
@@ -1881,10 +1889,6 @@ Here libraries finished
 }
 
 /*========================== Latest News ==========================*/
-.news {
-  margin-bottom: 6.25rem;
-}
-
 .news__row .feed__item:first-of-type .feed__image {
   width: 100%;
   height: 10.9375rem;
@@ -1917,6 +1921,7 @@ Here libraries finished
 
 /*========================== Sponsors ==========================*/
 .sponsors {
+  margin-top: 3.125rem;
   margin-bottom: 6.25rem;
 }
 
@@ -2104,14 +2109,45 @@ hr {
   background: var(--primary-color);
   color: var(--white-color);
   padding-top: 6.25rem;
+  position: relative;
+}
+
+.contact__header::before, .contact__title::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.contact__header::before {
+  border-bottom: 0.25rem solid var(--pink-color-2);
+  margin-left: -2rem;
+}
+
+.contact__title::before {
+  height: 0.25rem;
+  background: var(--primary-accent-color);
+  border-left: 0.0625rem solid var(--primary-color);
+  border-right: 0.0625rem solid var(--primary-color);
+}
+
+.contact__header .container {
+  height: 8.875rem;
+}
+
+.contact__row {
+  height: 100%;
 }
 
 .contact__title {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 0;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 2.3529411765rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 /*========================== Contact Form ==========================*/
@@ -2246,11 +2282,21 @@ hr {
   }
 
   .header-fade-in {
+    display: flex;
     height: 100vh;
   }
 
   .header__container, .header__list {
     flex-direction: column;
+  }
+
+  .header__container {
+    height: auto;
+    align-self: center;
+  }
+
+  .header__item {
+    margin-top: 3rem;
   }
 
   .header__logo {

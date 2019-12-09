@@ -2,8 +2,10 @@
 
 :root {
   --pink-color: #ffe5e5;
+  --pink-color-2: #ebb8b8;
   --red-color: #e7402f;
   --primary-color: #cc4d4d;
+  --primary-accent-color: rgba(136, 60, 60, 0.50);
   --primary-shadow-color: #a72525;
   --primary-dark-color: #773737;
   --primary-light-color: rgba(204, 77, 77, 0.6);
@@ -124,6 +126,11 @@ input, textarea {
   color: $gray-color-4;
   text-transform: uppercase;
   height: auto;
+}
+
+.block-scroll{
+  overflow: hidden!important;
+  height: 100vh!important;
 }
 
 .cover {

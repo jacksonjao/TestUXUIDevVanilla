@@ -3,20 +3,54 @@
 /*========================== Contact ==========================*/
 
 
-
 .contact__header{
   background: $primary-color;
   color: $white-color;
   padding-top: $header-height;
+  position: relative;
+}
+
+.contact__header::before, .contact__title::before{
+  content: '';
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.contact__header::before{
+  border-bottom: 0.25rem solid $pink-color-2;
+  margin-left: -2rem;
+}
+
+
+.contact__title::before{
+  height: 0.25rem;
+  background:  $primary-accent-color;
+  border-left: 0.0625rem solid $primary-color;
+  border-right: 0.0625rem solid $primary-color;
+}
+
+.contact__header .container{
+  height: 8.875rem;
+}
+
+.contact__row{
+  height: 100%;
+
 }
 
 .contact__title{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 0;
   text-transform: uppercase;
   font-weight: $semi-bold;
   font-size: 2.3529411765rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
+
+
 
 
 /*========================== Contact Form ==========================*/

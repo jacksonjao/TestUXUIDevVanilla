@@ -11,10 +11,15 @@ windowRef.resize((event) => {
     menu.setDevice(event.target.innerWidth <= 992);
 });
 
-function sectionSelected(element){
+function sectionSelected(element) {
     const linkElement = $(element)[0].children[0];
     $('.header__item').removeClass('header__item--active');
     $(element).addClass('header__item--active');
-    menu.toggleMenu();
+    menu.toggleMenu(scrollToSection);
     scrollToSection.goToSection(linkElement);
 }
+
+function openMenu() {
+    menu.toggleMenu(scrollToSection);
+}
+

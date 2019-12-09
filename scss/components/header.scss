@@ -108,12 +108,25 @@
   }
 
   .header-fade-in {
+    display: flex;
     height: 100vh;
   }
+
 
   .header__container, .header__list {
     flex-direction: column;
   }
+
+  .header__container{
+    height: auto;
+    align-self: center;
+  }
+
+
+  .header__item{
+    margin-top: 3rem;
+  }
+
 
   .header__logo {
     justify-content: center;

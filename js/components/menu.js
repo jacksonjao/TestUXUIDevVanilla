@@ -3,15 +3,22 @@ class Menu {
     menuRef;
     scrollPosY;
     isMobile;
-
+    isOpen;
     constructor(actionButtonId, menuId, isMobile) {
         this.actionButtonRef = $(actionButtonId);
         this.menuRef = $(menuId);
         this.scrollPosY = 0;
         this.isMobile = isMobile;
+        this.isOpen = false;
     }
 
-    toggleMenu() {
+    toggleMenu(scroll) {
+        this.isOpen = !this.isOpen
+        if(this.isOpen){
+            scroll.disableScroll();
+        }else{
+            scroll.enableScroll();
+        }
         this.menuRef.toggleClass('header-fade-in');
         this.actionButtonRef.toggleClass('header__menu-icon--activated')
     }
